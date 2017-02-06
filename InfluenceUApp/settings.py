@@ -22,10 +22,6 @@ SECRET_KEY = '$6(x*g_2g9l_*g8peb-@anl5^*8q!1w)k&e&2!i)t6$s8kia95'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', True)
 
-TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = []
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -41,11 +37,12 @@ INSTALLED_APPS = (
     'compressor',
     'verification',
     'django.contrib.sites',
+    'django_twilio',
+    'simple_email_confirmation',
 )
 
 MIDDLEWARE_CLASSES = (
     'djangosecure.middleware.SecurityMiddleware',
-    'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.http.ConditionalGetMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'csp.middleware.CSPMiddleware',
+    # 'csp.middleware.CSPMiddleware',
 )
 
 ROOT_URLCONF = 'InfluenceUApp.urls'
@@ -86,6 +83,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -141,6 +140,14 @@ REST_FRAMEWORK = {
     )
 }
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'luxahrlite@gmail.com'
+EMAIL_HOST_PASSWORD = 'BixbyMontreal1995'
+EMAIL_PORT = 587
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
@@ -153,16 +160,31 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = True
-CSP_DEFAULT_SRC = ("'self'")
-CSP_SCRIPT_SRC = ("'self'")
-CSP_IMG_SRC = ("'self'")
-CSP_MEDIA_SRC = ("'self'")
-CSP_FONT_SRC = ("'self'")
-CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")
-CSP_CONNECT_SRC = ("'self'")
-CSP_FRAME_SRC = ("'self'")
+#
+# CSP_DEFAULT_SRC = "'self'"
+# CSP_SCRIPT_SRC = ("'self'", 'https://127.0.0.1:8000/', "'unsafe-inline'", 'code.jquery.com', 'www.google-analytics.com', 'cdnjs.cloudflare.com',
+#                   'maxcdn.bootstrapcdn.com')
+# CSP_IMG_SRC = ("'self'", 'www.google-analytics.com', 'https://cdnjs.cloudflare.com')
+# CSP_MEDIA_SRC = ("'self'", 'https://static.olark.com')
+# CSP_FONT_SRC = ("'self'", 'cdn.comfonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com',
+#                 'maxcdn.bootstrapcdn.com')
+# CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'fonts.googleapis.com')
+# CSP_CONNECT_SRC = "'self'"
+# CSP_CHILD_SRC = "'self'"
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_COOKIE_SECURE = True;
+CSRF_COOKIE_SECURE = True
+
+
+#TWILIO
+TWILIO_ACCOUNT_SID = "ACe566714112033a0e33e96148f8c6dc02"
+TWILIO_AUTH_TOKEN = "d1e0f2b919245b1f13a490340e69b126"
+TWILIO_DEFAULT_CALLERID = 'InfluenceU'
+
+
+#EMAIL VERIFICATION
+ACCOUNT_ACTIVATION_DAYS = 1
+REGISTRATION_OPEN = True
+

@@ -9,5 +9,9 @@ gunicorn==19.6.0
 six==1.10.0
 static3==0.7.0
 wsgiref==0.1.2
-django-secure==0.1.2
+django-secure==1.0.1
 MySQL-python==1.2.5
+django-twilio==0.8.0
+twilio==5.7.0
+django-csp==3.1
+django-registration==2.2

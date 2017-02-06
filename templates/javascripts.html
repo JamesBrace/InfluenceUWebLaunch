@@ -13,17 +13,45 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script> 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"
-        integrity="sha256-+0edSx9qZO1m2O7eTtlMA8jEQcUZQVQQtG4YN3FHzJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"
-        integrity="sha256-4Gqdag/Zlcddp8v1IeY8ALeFaBRm4oxFvoci9aNXnow=" crossorigin="anonymous"></script> 
+
+<!-- CHANGE TO MINIFIED VERSIONS FOR PRODUCTION -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script> 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-cookies.min.js"
         integrity="sha256-9cxsbQMTWat41FHa4tfff6XNcHi5nETV32vTPRriAlQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.4/js/ngDialog.min.js"
         integrity="sha256-v5zBI8KHBj3mu0Q28qBC6EgVfSBEXEZRD1AGmHIII74=" crossorigin="anonymous"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.8/js/intlTelInput.min.js"
+        integrity="sha256-SpanRm9vEzdr2gFp9bea8qSCRabzFPYNOvN4znAwf5s=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"
+        integrity="sha256-tSRROoGfGWTveRpDHFiWVz+UXt+xKNe90wwGn25lpw8=" crossorigin="anonymous"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-recaptcha/4.0.3/angular-recaptcha.js"
+        integrity="sha256-HzpqEd2kofe3OoUGoMsjjhhDCC7YaTOqpxRkBTzVVfA=" crossorigin="anonymous"></script>
+
 
 {% compress js %}
+
+<script type="text/javascript" src="{% static 'javascripts/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/config.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/routes.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/verification.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/services/verification.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/controllers/verification.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/utils/notify.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/controllers/emailCheck.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/controllers/verification.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/controllers/registration.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/controllers/resend.controller.js' %}"></script>
+
+
+
 
 
 {% endcompress %}

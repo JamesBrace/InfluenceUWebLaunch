@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1>You were registered successfully!</h1>
+        <h2>You will soon receive an email with a verification link.</h2>
+
+        <h3>Didn't receive an email? Check your spam or <button class = "btn btn-info btn-s" data-ng-click="vm.resend()"
+        data-toggle="modal" data-target="#myModal"> Resend </button></h3>
+
+        <small> NOTICE: You need to verify your raffle entry within the next day or it will be discarded. YOU WILL NOT BE ABLE TO SUBMIT ANOTHER ENTRY WITH THE SAME EMAIL ADDRESS.</small>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2 data-ng-show="vm.sending">Attempting to resend verification email...</h2>
+            <i data-ng-show="vm.sending" class="fa fa-spinner fa-5x fa-pulse fa-fw"></i>
+            <h3 data-ng-show="vm.success">{{ vm.message_success }} <i class='fa fa-thumbs-o-up fa-2x' aria-hidden='true'></i></h3>
+            <h3 data-ng-show="vm.fail">{{ vm.message_fail }} <i class='fa fa-frown-o fa-2x' aria-hidden='true'></i></h3>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="vm.reset()">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>

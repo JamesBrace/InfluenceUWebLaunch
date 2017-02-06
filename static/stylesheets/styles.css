@@ -1,0 +1,61 @@
+has-feedback label~.form-control-feedback {
+    top: 14px;
+}
+
+.intl-tel-input .country-list {
+    z-index: 3;
+}
+
+.intl-tel-input {
+    display: table-cell;
+}
+
+.input-group-addon {
+    background-color: #455A64;
+    color: #fff;
+}
+
+.success {
+    color: #0EEA60;
+}
+
+.inputLabel {
+    width: 193px;
+    text-align: left;
+}
+
+
+/* ========== NOTIFICATIONS =============*/
+
+[data-notify="container"][class*="alert-pastel-"] {
+   background-color: rgb(255, 255, 238);
+   border-width: 0px;
+   border-left: 15px solid rgb(255, 240, 106);
+   border-radius: 0px;
+   box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+   letter-spacing: 1px;
+}
+[data-notify="container"].alert-pastel-info {
+   border-left-color: rgb(255, 179, 40);
+}
+[data-notify="container"].alert-pastel-danger {
+   border-left-color: rgb(255, 103, 76);
+}
+[data-notify="container"].alert-pastel-warning {
+   border-left-color: rgb(255, 240, 106);
+}
+[data-notify="container"].alert-pastel-success {
+   border-left-color: rgb(80, 255, 40);
+}
+[data-notify="container"][class*="alert-pastel-"] > [data-notify="title"] {
+   color: rgb(80, 80, 57);
+   display: block;
+   font-weight: 700;
+   margin-bottom: 5px;
+}
+[data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
+   font-weight: 400;
+}
+[data-notify="container"][class*="alert-pastel-"] > [data-notify="dismiss"] {
+    color: #f04124;
+}
