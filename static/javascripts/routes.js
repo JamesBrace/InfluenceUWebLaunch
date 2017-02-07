@@ -15,7 +15,7 @@
   * @desc Define valid application routes
   */
   function config($routeProvider) {
-    $routeProvider.when('/', {
+    $routeProvider.when('/register', {
       controller: 'RegisterController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/verification/register.html'
@@ -25,6 +25,6 @@
       controller: 'ResendController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/verification/success.html'
-    }).otherwise('/');
+    });
   }
 })();

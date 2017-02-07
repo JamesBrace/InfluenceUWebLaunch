@@ -16,11 +16,13 @@ from vendor.registration import signals
 from vendor.registration.views import ActivationView as BaseActivationView
 from vendor.registration.views import RegistrationView as BaseRegistrationView
 
-from django.contrib.sites.models import Site
+from django.contrib.sites.requests import RequestSite
 
 from verification.models import Account
 from verification.permissions import IsAccountOwner
 from verification.serializers import AccountSerializer, ResponseSerializer
+
+from django.core.urlresolvers import reverse
 
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
@@ -78,10 +80,12 @@ class AccountViewSet(viewsets.ModelViewSet):
         Build the template context used for the activation email.
 
         """
+        print(settings.ACCOUNT_ACTIVATION_DAYS);
+
         return {
             'activation_key': activation_key,
             'expiration_days': settings.ACCOUNT_ACTIVATION_DAYS,
-            'site': 'InfluenceU'
+            'site': get_current_site(self.request),
         }
 
     def send_activation_email(self, user):
@@ -136,14 +140,14 @@ class AccountViewSet(viewsets.ModelViewSet):
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ActivationView(BaseActivationView):
+class ActivationView(views.APIView):
     """
     Given a valid activation key, activate the user's
     account. Otherwise, show an error message stating the account
     couldn't be activated.
 
     """
-    def activate(self, *args, **kwargs):
+    def post(self, **kwargs):
         # This is safe even if, somehow, there's no activation key,
         # because unsign() will raise BadSignature rather than
         # TypeError on a value of None.
@@ -237,7 +241,7 @@ class ResendView(views.APIView):
         return {
             'activation_key': activation_key,
             'expiration_days': settings.ACCOUNT_ACTIVATION_DAYS,
-            'site': 'InfluenceU'
+            'site': get_current_site(self.request)
         }
 
     def send_activation_email(self, user):
