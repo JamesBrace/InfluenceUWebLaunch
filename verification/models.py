@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, User
 from django.core.validators import RegexValidator
-from simple_email_confirmation.models import SimpleEmailConfirmationUserMixin
 
 from django.db import models
 
@@ -29,6 +28,9 @@ class AccountManager(BaseUserManager):
         account.special_key = User.objects.make_random_password(length=6, allowed_chars='0123456789')
 
         account.set_password(password)
+
+        print(account.password)
+
         account.save()
 
         return account
@@ -50,6 +52,7 @@ class Account(AbstractBaseUser):
     special_key = models.CharField(max_length=15, blank=True, default="123456")
 
     is_valid = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=False)
     has_submitted_shoe = models.BooleanField(default=False)
 
     created_at = models.DateTimeField(auto_now_add=True)

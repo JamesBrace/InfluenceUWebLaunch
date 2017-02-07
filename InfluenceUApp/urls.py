@@ -18,5 +18,16 @@ urlpatterns = [
         name='registration_activation_complete'),
     url(r'^api/v1/resend/', ResendView.as_view(), name='resend'),
     url(r'^api/v1/activate/(?P<activation_key>[-:\w]+)/$', ActivationView.as_view(), name='registration_activate'),
+    url(r'^register/complete/$',
+        TemplateView.as_view(
+            template_name='registration/registration_complete.html'
+        ),
+        name='registration_complete'),
+    url(r'^register/closed/$',
+        TemplateView.as_view(
+            template_name='registration/registration_closed.html'
+        ),
+        name='registration_disallowed'),
+    url(r'', include('registration.auth_urls')),
     url('^.*$', IndexView.as_view(), name='index'),
 ]

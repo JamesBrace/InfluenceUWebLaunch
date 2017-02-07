@@ -1,10 +1,6 @@
 from rest_framework import permissions, viewsets, status, views
 from rest_framework.response import Response
-from rest_framework.renderers import JSONRenderer
-from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
-from vendor.registration.backends.hmac.views import RegistrationView
-
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
@@ -14,15 +10,12 @@ from django.template.loader import render_to_string
 
 from vendor.registration import signals
 from vendor.registration.views import ActivationView as BaseActivationView
-from vendor.registration.views import RegistrationView as BaseRegistrationView
-
 from django.contrib.sites.requests import RequestSite
 
 from verification.models import Account
 from verification.permissions import IsAccountOwner
 from verification.serializers import AccountSerializer, ResponseSerializer
 
-from django.core.urlresolvers import reverse
 
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
@@ -40,7 +33,7 @@ class AccountViewSet(viewsets.ModelViewSet):
         the activation key is simply the username, signed using Django's
         TimestampSigner, with HMAC verification on activation.
 
-        """
+    """
     email_body_template = 'registration/activation_email.txt'
     email_subject_template = 'registration/activation_email_subject.txt'
 
@@ -140,22 +133,24 @@ class AccountViewSet(viewsets.ModelViewSet):
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ActivationView(views.APIView):
+class ActivationView(BaseActivationView):
     """
     Given a valid activation key, activate the user's
     account. Otherwise, show an error message stating the account
     couldn't be activated.
 
     """
-    def post(self, **kwargs):
+    def activate(self, *args, **kwargs):
         # This is safe even if, somehow, there's no activation key,
         # because unsign() will raise BadSignature rather than
         # TypeError on a value of None.
         username = self.validate_key(kwargs.get('activation_key'))
+
         if username is not None:
             user = self.get_user(username)
             if user is not None:
                 user.is_active = True
+                print(user.is_active)
                 user.save()
                 return user
         return False
@@ -189,17 +184,11 @@ class ActivationView(views.APIView):
         doesn't.
 
         """
-        User = get_user_model()
-        lookup_kwargs = {
-            User.USERNAME_FIELD: username,
-            'is_active': False
-        }
         try:
-            user = User.objects.get(**lookup_kwargs)
+            user = Account.objects.get(email=username)
             return user
-        except User.DoesNotExist:
+        except Account.DoesNotExist:
             return None
-
 
 class ResendView(views.APIView):
     email_body_template = 'registration/activation_email.txt'

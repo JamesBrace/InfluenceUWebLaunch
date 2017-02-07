@@ -3,6 +3,6 @@
 {% trans "In order to continue the registration process, you need to click the link below to verify your account." %}
 {% trans "The next step is to follow us on Facebook or Twitter so you can stay in tune for the launch link we will be releasing" %}
 
-http://{{ request.META.HTTP_HOST }}{% url 'registration_activate' activation_key %}
+https://127.0.0.1:8000{% url 'registration_activate' activation_key %}
 
 {% blocktrans %}Link is valid for {{ expiration_days }} days.{% endblocktrans %}

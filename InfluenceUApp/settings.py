@@ -17,15 +17,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$6(x*g_2g9l_*g8peb-@anl5^*8q!1w)k&e&2!i)t6$s8kia95'
+SECRET_KEY = '$6(x*g_2g9l_*g8peb-@anl5^*8q!1w)k&e&2!i)t6$s8kia94'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = os.environ.get('DEBUG', False)
 
 # Application definition
 
 INSTALLED_APPS = (
-    "sslserver",
+    'sslserver'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,8 +37,6 @@ INSTALLED_APPS = (
     'compressor',
     'verification',
     'django.contrib.sites',
-    'django_twilio',
-    'simple_email_confirmation',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,14 +60,41 @@ WSGI_APPLICATION = 'InfluenceUApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-import dj_database_url
-
-# Right now being used for testing purposes
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-    )
-}
+if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+    # Running on production App Engine, so connect to Google Cloud SQL using
+    # the unix socket at /cloudsql/<your-cloudsql-connection string>
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'OPTIONS': {
+                'sql_mode': 'traditional',
+            },
+            'HOST': '/cloudsql/yeezy-red:us-central1:yeezy-red-mysql',
+            'NAME': 'accounts',
+            'USER': 'root',
+            'PASSWORD': 'Sophie1995',
+        }
+    }
+else:
+    # Running locally so connect to either a local MySQL instance or connect to
+    # Cloud SQL via the proxy. To start the proxy via command line:
+    #
+    #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
+    #
+    # See https://cloud.google.com/sql/docs/mysql-connect-proxy
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'OPTIONS': {
+                'sql_mode': 'traditional',
+            },
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+            'NAME': 'accounts',
+            'USER': 'root',
+            'PASSWORD': 'Sophie1995',
+        }
+    }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -160,17 +185,17 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = True
-#
-# CSP_DEFAULT_SRC = "'self'"
-# CSP_SCRIPT_SRC = ("'self'", 'https://127.0.0.1:8000/', "'unsafe-inline'", 'code.jquery.com', 'www.google-analytics.com', 'cdnjs.cloudflare.com',
-#                   'maxcdn.bootstrapcdn.com')
-# CSP_IMG_SRC = ("'self'", 'www.google-analytics.com', 'https://cdnjs.cloudflare.com')
-# CSP_MEDIA_SRC = ("'self'", 'https://static.olark.com')
-# CSP_FONT_SRC = ("'self'", 'cdn.comfonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com',
-#                 'maxcdn.bootstrapcdn.com')
-# CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'fonts.googleapis.com')
-# CSP_CONNECT_SRC = "'self'"
-# CSP_CHILD_SRC = "'self'"
+
+CSP_DEFAULT_SRC = "'self'"
+CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'", 'code.jquery.com', 'www.google-analytics.com', 'cdnjs.cloudflare.com',
+                  'maxcdn.bootstrapcdn.com')
+CSP_IMG_SRC = ("'self'", 'www.google-analytics.com', 'https://cdnjs.cloudflare.com')
+CSP_MEDIA_SRC = ("'self'", 'https://static.olark.com')
+CSP_FONT_SRC = ("'self'", 'cdn.comfonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com',
+                'maxcdn.bootstrapcdn.com')
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'fonts.googleapis.com')
+CSP_CONNECT_SRC = "'self'"
+CSP_CHILD_SRC = "'self'"
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

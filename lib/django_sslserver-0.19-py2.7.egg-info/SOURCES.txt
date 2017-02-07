@@ -1,0 +1,12 @@
+django_sslserver.egg-info/PKG-INFO
+django_sslserver.egg-info/SOURCES.txt
+django_sslserver.egg-info/dependency_links.txt
+django_sslserver.egg-info/requires.txt
+django_sslserver.egg-info/top_level.txt
+sslserver/__init__.py
+sslserver/certs/development.crt
+sslserver/certs/development.key
+sslserver/certs/server.csr
+sslserver/management/__init__.py
+sslserver/management/commands/__init__.py
+sslserver/management/commands/runsslserver.py

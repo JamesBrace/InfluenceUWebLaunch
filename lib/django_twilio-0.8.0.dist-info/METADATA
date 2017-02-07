@@ -1,0 +1,66 @@
+Metadata-Version: 2.0
+Name: django-twilio
+Version: 0.8.0
+Summary: Build Twilio functionality into your Django apps.
+Home-page: http://twilio.com/
+Author: Randall Degges
+Author-email: rdegges@gmail.com
+License: UNLICENSE
+Keywords: t,w,i,l,i,o, ,t,e,l,e,p,h,o,n,y, ,c,a,l,l, ,p,h,o,n,e, ,v,o,i,p, ,s,m,s
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: twilio (>=3.6.9)
+Requires-Dist: Django (>=1.4)
+Requires-Dist: django-phonenumber-field (>=0.6)
+
+=============
+Django-Twilio
+=============
+
+
+Integrate Twilio into your Django apps with ease.
+
+
+.. image:: https://badge.fury.io/py/django-twilio.png
+    :target: http://badge.fury.io/py/django-twilio
+
+.. image:: https://travis-ci.org/rdegges/django-twilio.png?branch=master
+        :target: https://travis-ci.org/rdegges/django-twilio
+
+.. image:: https://pypip.in/d/django-twilio/badge.png
+        :target: https://crate.io/packages/django-twilio
+
+Meta
+----
+
+* Author: Randall Degges
+* Email:  rdegges@gmail.com
+* Maintainer: Paul Hallett
+* Email: paul@twilio.com
+* Status: active development, stable, maintained
+
+
+Twilio makes it easy to send & receive SMS messages, and create & manage voice calls through software.
+
+Django-twilio makes it easy to use Twilio in your Django projects.
+
+Documentation
+-------------
+
+The documentation is hosted at ReadTheDocs. You can check out the docs
+here - http://django-twilio.rtfd.org/
+
+

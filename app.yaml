@@ -30,7 +30,7 @@ handlers:
   http_headers:
     X-UA-Compatible: "IE=edge"
 - url: .*
-  script: hrlite.wsgi.application
+  script: InfluenceUApp.wsgi.application
 
 # Only pure Python libraries can be vendored
 # Python libraries that use C extensions can

@@ -1,22 +1,66 @@
-<!DOCTYPE html>
-<html ng-app="app">
+<!doctype html>
+<html lang="en" ng-app="app">
 <head>
-  <title>InfluenceU | Yeezy Launch</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta property="og:title" content="adidas YEEZY Boost 350 V2 Core Black / White Giveaway" />
+    <meta property="og:url" content="http://releases.influenceu.com" />
+    <meta property="og:image" content="http://releases.influenceu.com/yeezy-core-black-white.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/" />
+    <title>adidas YEEZY Boost 350 Core Black / Red Raffle | Influence U</title>
 
-  <base href="/" />
+    {% include 'stylesheets.html' %}
 
-  {% include 'stylesheets.html' %}
+
 </head>
-
 <body>
-
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 ng-view"></div>
+    {% load staticfiles %}
+    <div id="main">
+    <div id="logo">
+        <a href="//www.influenceu.com"><img src= {% static "images/inf-logo-blk.png" %} alt="Influence U"></a>
     </div>
-  </div>
 
-  {% include 'javascripts.html' %}
+    <div class="content">
+        <h1><span style="font-size: 22px;">adidas YEEZY Boost 350 Core Black / Red</span> <span style="padding-top: 10px; display: block; letter-spacing: 5px; font-size: 32px;">RAFFLE</span></h1>
+    </div>
+    <div class="content yeezy-pic">
+        <img src= {% static "images/yeezy-core-black-white.jpg" %} alt="YEEZY Boost 350 Core Black / Red">
+    </div>
+    <div class="content">
+        <h3>A new colourway means another raffle!</h3>
+        <p>ONCE AGAIN, WE'RE OFFERING U THE CHANCE TO FINALLY GET YOUR HANDS ON A PAIR OF <span style="text-decoration: underline">adidas YEEZY 350's.</span> </p>
+        <p><span style="font-weight: 500; text-decoration: underline">Step 1.</span></p>
+        <p>You must sign up for an Influence U Raffle account below. The account will allow you to enter the raffle once we share the secret link.</p>
+        <p><span style="font-weight: 500; text-decoration: underline">Step 2.</span></p>
+        <p>Follow us on <a href="//facebook.com/influenceu">Facebook</a>, <a href="//instagram.com/influenceu">Instagram</a> &
+            <a href="//twitter.com/influenceu">Twitter</a> and wait for the secret link to be published on <span style ="font-weight: 400">our social media before February 11th 2017.</span></p>
+        <p><span style="font-weight: 500; text-decoration: underline">Step 3.</span></p>
+        <p>Once you have access to the secret link you will be asked to login using your new Influence U Raffle Account. After you log in you simply just have to follow the steps provided!</p>
+    </div>
+
+    <div class="content container-fluid">
+        <div class="row">
+            <div class="col-xs-12 ng-view"></div>
+        </div>
+    </div>
+
+
+    <div class="content footer">
+        <p class="terms">This raffle is limited to one entry per person. Any multiple entries from one person is grounds for disqualification. Raffle winners will be contacted via email on February 10th, 2017. If you do not comply with the stated instructions, your shoes will be reentered in the raffle and a new winner will be selected.</p>
+    </div>
+
+    <div class="content">
+        <div id="social">
+            <ul>
+                <li class="facebook"><a href="//facebook.com/influenceu"><img src={% static "images/facebook.png" %} alt="Facebook"></a></li>
+                <li class="twitter"><a href="//twitter.com/influenceu"><img src={% static "images/twitter.png" %} alt="Twitter"></a></li>
+                <li class="instagram"><a href="//instagram.com/influenceu"><img src={% static "images/instagram.png" %} alt="Instagram"></a></li>
+                <li class="snapchat"><a href="//snapchat.com/add/influence.u"><img src={% static "images/snapchat.png" %} alt="Snapchat"></a></li>
+            </ul>
+        </div>
+    </div>
+
+{% include 'javascripts.html' %}
 </body>
 </html>

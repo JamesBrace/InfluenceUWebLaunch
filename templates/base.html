@@ -1,10 +1,27 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" />#}
+    <title>{% block title %}User test{% endblock %}</title>
 </head>
+
 <body>
-$END$
+    <div id="header">
+    {% block header %}
+    {% endblock %}
+    </div>
+
+    <div id="content">
+    {% block content %}SUCCESS. YOUR ACCOUNT IS NOW ACTIVE: {{ user.active }}{% endblock %}
+    </div>
+
+    <div id="footer">
+    {% block footer %}
+        <hr />
+    {% endblock %}
+    </div>
 </body>
+
 </html>

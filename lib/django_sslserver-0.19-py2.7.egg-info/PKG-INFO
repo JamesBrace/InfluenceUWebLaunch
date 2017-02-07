@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django-sslserver
+Version: 0.19
+Summary: An SSL-enabled development server for Django
+Home-page: https://github.com/teddziuba/django-sslserver
+Author: Ted Dziuba
+Author-email: tjdziuba@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
