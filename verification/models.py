@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, User
 from django.core.validators import RegexValidator
+import datetime
 
 from django.db import models
 
@@ -23,6 +24,10 @@ class AccountManager(BaseUserManager):
             first_name=kwargs.get('first_name'),
             last_name=kwargs.get('last_name'),
             phone_number=kwargs.get('phone_number'),
+            birthdate=kwargs.get('birthdate'),
+            country=kwargs.get('country'),
+            shoe_size=kwargs.get('shoe_size'),
+            buying_option=kwargs.get('buying_option')
         )
 
         account.special_key = User.objects.make_random_password(length=6, allowed_chars='0123456789')
@@ -42,18 +47,22 @@ class Account(AbstractBaseUser):
     first_name = models.CharField(max_length=40, blank=False, default="Steve")
     last_name = models.CharField(max_length=40, blank=False, default="Jobs")
 
+    birthdate = models.DateField(blank=False, default=datetime.date.today())
+    country = models.CharField(max_length=40, blank=False, default="Canada")
+
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                                  message="Phone number must be entered in the format: '+999999999'. "
                                          "Up to 15 digits allowed.")
     phone_number = models.CharField(validators=[phone_regex], blank=True, max_length=15, unique=True, null=True)  # validators should be a list
 
-    password = models.CharField(max_length=15, blank=False)
-
     special_key = models.CharField(max_length=15, blank=True, default="123456")
 
     is_valid = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
-    has_submitted_shoe = models.BooleanField(default=False)
+
+    shoe_size = models.IntegerField(max_length=2, blank=False, )
+    buying_option = models.CharField(max_length=40, blank=False, default="Store")
+    #has_submitted_shoe = models.BooleanField(default=False)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
