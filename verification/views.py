@@ -97,7 +97,7 @@ class AccountViewSet(viewsets.ModelViewSet):
             'user': user
         })
 
-        action_url = "https://yeezy-red.appspot.com" + reverse('registration_activate', kwargs={'activation_key':activation_key})
+        action_url = "https://releases.influenceu.com" + reverse('registration_activate', kwargs={'activation_key':activation_key})
 
         message = EmailMessage(
             subject=None,
