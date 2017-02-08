@@ -130,7 +130,7 @@ STATICFILES_FINDERS = (
 )
 
 # change to true when in production!!!
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', True)
 
 TEMPLATES = [
     {
