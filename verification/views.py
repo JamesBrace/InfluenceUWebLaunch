@@ -261,7 +261,7 @@ class ResendView(views.APIView):
             'user': user
         })
 
-        action_url = "https://yeezy-red.appspot.com" + reverse('registration_activate',
+        action_url = "https://releases.influenceu.com" + reverse('registration_activate',
                                                                kwargs={'activation_key': activation_key})
 
         print(action_url)

@@ -2,7 +2,213 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640c5738-a395-456e-b9a9-68149bc45627" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/CACHE/js/a10f8361437f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/fonts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/calendar-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_off.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_on.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-addlink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-alert.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-calendar.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-changelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-clock.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-deletelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-no.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown-alt.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-yes.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/search.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/sorting-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-add.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-arrowright.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/cancel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/change_form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/popup_response.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/xregexp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/facebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/inf-logo-blk.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/instagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/snapchat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/twitter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/images/yeezy-core-black-white.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/utils/notify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/emailCheck.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/registration.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/resend.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/verification.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/services/verification.service(nonmin).js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/services/verification.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/verification.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/css/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/css/intlTelInput.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/img/flags.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/img/flags@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/js/intlTelInput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/js/intlTelInput.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/build/js/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/css/countrySync.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/css/isValidNumber.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/css/prism.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/country-sync.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/default-country-ip.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/hidden-input.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/is-valid-number.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/modify-country-data.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/national-mode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/gen/only-countries-europe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/countrySync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/defaultCountryIp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/hiddenInput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/isValidNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/modifyCountryData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/nationalMode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/onlyCountriesEurope.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/js/prism.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/partials/countrySync.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/partials/hiddenInput.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/partials/isValidNumber.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/partials/nationalMode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/partials/simpleInput.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/examples/template.html.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/bump.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/exec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/imagemin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/jshint.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/replace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/responsive_images.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/retinafy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/sass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/shell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/sprite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/tmpl/sprite.scss.mustache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/uglify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/grunt/watch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/intl-tel-input.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/screenshot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/spec.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/css/demo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/css/intlTelInput.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/css/sprite.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/css/sprite@2x.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/js/data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/js/intlTelInput.js.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/js/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/js/wrapper.js.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/helpers/helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/core/countrychangeEvent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/core/dropdownShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/core/initialValues.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/core/multipleInstances.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/core/usingDropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/core/usingInput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/destroy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/getExtension.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/getNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/getNumberType.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/getSelectedCountryData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/getValidationError.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/isValidNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/setCountry.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/methods/setNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/allowDropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/autoHideDialCode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/autoPlaceholder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/customPlaceholder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/dropdownContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/excludeCountries.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/formatOnDisplay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/geoIpLookup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/initialCountry.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/nationalMode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/onlyCountries.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/placeholderNumberType.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/preferredCountries.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/separateDialCode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/options/utilsScript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/static/defaults.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/static/getCountryData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/intl-tel-input/src/spec/tests/static/loadUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/snackbarjs/snackbar.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/lib/snackbarjs/snackbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/css/bootstrap-tweaks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/css/default.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/css/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/img/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/js/ajax-form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/js/csrf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/js/default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/js/jquery-1.12.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/rest_framework/js/prettify-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/stylesheets/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/templates/verification/activated.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/templates/verification/redirect.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/templates/verification/register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/templates/verification/success.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/views.py" afterPath="$PROJECT_DIR$/verification/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +264,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="178">
+              <caret line="263" column="49" lean-forward="false" selection-start-line="263" selection-start-column="49" selection-end-line="263" selection-end-column="49" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
@@ -242,20 +448,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="InfluenceUWebLaunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InfluenceUWebLaunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InfluenceUWebLaunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="verification" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -613,9 +805,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21082391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21082391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1077,8 +1269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/verification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="178">
+          <caret line="263" column="49" lean-forward="false" selection-start-line="263" selection-start-column="49" selection-end-line="263" selection-end-column="49" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>
