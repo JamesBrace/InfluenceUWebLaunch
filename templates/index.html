@@ -9,10 +9,7 @@
     <base href="/" />
     <title>adidas YEEZY Boost 350 Core Black / Red Raffle | Influence U</title>
 
-    <div>
-
-    </div>
-
+    {% include 'stylesheets.html' %}
 
     <style>
         body {
@@ -57,7 +54,7 @@
         }
 
         .content {
-            max-width: 540px;
+            max-width: 540px !important;
         }
 
         .content .yeezy-pic {
@@ -95,6 +92,7 @@
 
         .form-group {
             margin-bottom: 1rem;
+            margin-left: -5%;
         }
 
         label {
@@ -210,12 +208,12 @@
         </div>
 
         <div style="max-width: 540px;">
-            <h1 style="padding: 10px; font-size: 24px; font-weight: 500; line-height: 36px;"><span style="font-size: 22px;">adidas YEEZY Boost 350 Core Black / Red</span> <span style="padding-top: 10px; display: block; letter-spacing: 5px; font-size: 32px;">RAFFLE</span></h1>
+            <h1 class="content"style="padding: 10px; font-size: 24px; font-weight: 500; line-height: 36px;"><span style="font-size: 22px;">adidas YEEZY Boost 350 Core Black / Red</span> <span style="padding-top: 10px; display: block; letter-spacing: 5px; font-size: 32px;">RAFFLE</span></h1>
         </div>
-        <div class="target" style="max-width: 540px; background: #edede3;">
+        <div class="content target" style="max-width: 540px; background: #edede3;">
             <img style ="max-width: 100%; height: auto;" src= {% static "images/yeezy-core-black-white.jpg" %} alt="YEEZY Boost 350 Core Black / Red">
         </div>
-        <div class="target" style="max-width: 540px;">
+        <div class="content target" style="max-width: 540px;">
             <h3>A new colourway means another raffle!</h3>
             <p style="padding: 8px; font-size: 14px; font-weight: 400;line-height: 20px;">ONCE AGAIN, WE'RE OFFERING U THE CHANCE TO FINALLY GET YOUR HANDS ON A PAIR OF <span style="text-decoration: underline">adidas YEEZY 350's.</span> </p>
             <p style="padding: 8px; font-size: 14px; font-weight: 400;line-height: 20px;"><span style="font-weight: 500; text-decoration: underline">Step 1.</span></p>
@@ -252,7 +250,7 @@
         </div>
     </div>
 
-{% include 'stylesheets.html' %}
+
 
 {% include 'javascripts.html' %}
 </body>
