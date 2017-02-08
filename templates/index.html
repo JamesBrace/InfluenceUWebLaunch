@@ -9,7 +9,10 @@
     <base href="/" />
     <title>adidas YEEZY Boost 350 Core Black / Red Raffle | Influence U</title>
 
-    {% include 'stylesheets.html' %}
+    <div>
+
+    </div>
+
 
     <style>
         body {
@@ -224,19 +227,21 @@
             <p>Once you have access to the secret link you will be asked to login using your new Influence U Raffle Account. After you log in you simply just have to follow the steps provided!</p>
         </div>
 
-        <div>
+
+
+        <div class="content">
             <div class="row">
                 <div class="col-xs-12 ng-view"></div>
             </div>
         </div>
 
 
-        <div>
+        <div class="content">
             <p class="terms">This raffle is limited to one entry per person. Any multiple entries from one person is grounds for disqualification. Raffle winners will be contacted via email on February 10th, 2017. If you do not comply with the stated instructions, your shoes will be reentered in the raffle and a new winner will be selected.</p>
         </div>
 
-        <div>
-            <div>
+        <div class="content">
+            <div id="social">
                 <ul>
                     <li class="facebook"><a href="//facebook.com/influenceu"><img src={% static "images/facebook.png" %} alt="Facebook"></a></li>
                     <li class="twitter"><a href="//twitter.com/influenceu"><img src={% static "images/twitter.png" %} alt="Twitter"></a></li>
@@ -246,6 +251,8 @@
             </div>
         </div>
     </div>
+
+{% include 'stylesheets.html' %}
 
 {% include 'javascripts.html' %}
 </body>

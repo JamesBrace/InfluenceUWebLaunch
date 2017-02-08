@@ -2,31 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640c5738-a395-456e-b9a9-68149bc45627" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/templates/verification/activated.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InfluenceUApp/settings.py" afterPath="$PROJECT_DIR$/InfluenceUApp/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/routes.js" afterPath="$PROJECT_DIR$/static/javascripts/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/facebook.png" afterPath="$PROJECT_DIR$/static/images/facebook.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/instagram.png" afterPath="$PROJECT_DIR$/static/images/instagram.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/snapchat.png" afterPath="$PROJECT_DIR$/static/images/snapchat.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/twitter.png" afterPath="$PROJECT_DIR$/static/images/twitter.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/facebook.png" afterPath="$PROJECT_DIR$/staticfiles/images/facebook.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/instagram.png" afterPath="$PROJECT_DIR$/staticfiles/images/instagram.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/snapchat.png" afterPath="$PROJECT_DIR$/staticfiles/images/snapchat.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/twitter.png" afterPath="$PROJECT_DIR$/staticfiles/images/twitter.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/verification/controllers/emailCheck.controller.js" afterPath="$PROJECT_DIR$/static/javascripts/verification/controllers/emailCheck.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/verification/controllers/registration.controller.js" afterPath="$PROJECT_DIR$/static/javascripts/verification/controllers/registration.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/verification/controllers/resend.controller.js" afterPath="$PROJECT_DIR$/static/javascripts/verification/controllers/resend.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/verification/services/verification.service.js" afterPath="$PROJECT_DIR$/static/javascripts/verification/services/verification.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/stylesheets/style.css" afterPath="$PROJECT_DIR$/static/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/templates/verification/register.html" afterPath="$PROJECT_DIR$/static/templates/verification/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/templates/verification/success.html" afterPath="$PROJECT_DIR$/static/templates/verification/success.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/javascripts/routes.js" afterPath="$PROJECT_DIR$/staticfiles/javascripts/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/verification/controllers/verification.controller.js" afterPath="$PROJECT_DIR$/static/javascripts/verification/controllers/verification.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/emailCheck.controller.js" afterPath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/emailCheck.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/registration.controller.js" afterPath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/registration.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/resend.controller.js" afterPath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/resend.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/verification.controller.js" afterPath="$PROJECT_DIR$/staticfiles/javascripts/verification/controllers/verification.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/javascripts/verification/services/verification.service.js" afterPath="$PROJECT_DIR$/staticfiles/javascripts/verification/services/verification.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/stylesheets/style.css" afterPath="$PROJECT_DIR$/staticfiles/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/templates/verification/register.html" afterPath="$PROJECT_DIR$/staticfiles/templates/verification/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/templates/verification/success.html" afterPath="$PROJECT_DIR$/staticfiles/templates/verification/success.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/javascripts.html" afterPath="$PROJECT_DIR$/templates/javascripts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/stylesheets.html" afterPath="$PROJECT_DIR$/templates/stylesheets.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/models.py" afterPath="$PROJECT_DIR$/verification/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/serializers.py" afterPath="$PROJECT_DIR$/verification/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/views.py" afterPath="$PROJECT_DIR$/verification/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +51,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3375">
-              <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+            <state relative-caret-position="423">
+              <caret line="253" column="0" lean-forward="true" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/templates/verification/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -67,8 +71,8 @@
       <file leaf-file-name="stylesheets.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/stylesheets.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,7 +91,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InfluenceUApp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-225">
               <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
@@ -173,10 +177,10 @@
         <option value="$PROJECT_DIR$/static/templates/verification/activated.html" />
         <option value="$PROJECT_DIR$/static/javascripts/routes.js" />
         <option value="$PROJECT_DIR$/static/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/templates/stylesheets.html" />
         <option value="$PROJECT_DIR$/templates/javascripts.html" />
         <option value="$PROJECT_DIR$/InfluenceUApp/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/stylesheets.html" />
       </list>
     </option>
   </component>
@@ -638,9 +642,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="716" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21082391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21082391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1019,14 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/templates/verification/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/templates/verification/success.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -1053,14 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2292">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="182" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/javascripts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1069,26 +1057,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2292">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="182" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/InfluenceUApp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-225">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/templates/verification/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3375">
-          <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        <state relative-caret-position="423">
+          <caret line="253" column="0" lean-forward="true" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/stylesheets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
