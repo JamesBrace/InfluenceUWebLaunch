@@ -2,49 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640c5738-a395-456e-b9a9-68149bc45627" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/decorators.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/middleware.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/tests/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/tests/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/tests/test_decorators.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/tests/test_middleware.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/tests/test_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/csp/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/check/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/check/csrf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/check/djangosecure.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/check/run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/check/sessions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/check/util.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/conf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/decorators.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/management/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/management/commands/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/management/commands/checksecure.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/middleware.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/tests/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/tests/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/djangosecure/tests/tests.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/facebook.png" afterPath="$PROJECT_DIR$/static/images/facebook.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/inf-logo-blk.png" afterPath="$PROJECT_DIR$/static/images/inf-logo-blk.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/instagram.png" afterPath="$PROJECT_DIR$/static/images/instagram.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/snapchat.png" afterPath="$PROJECT_DIR$/static/images/snapchat.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/twitter.png" afterPath="$PROJECT_DIR$/static/images/twitter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/yeezy-core-black-white.jpg" afterPath="$PROJECT_DIR$/static/images/yeezy-core-black-white.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/facebook.png" afterPath="$PROJECT_DIR$/staticfiles/images/facebook.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/inf-logo-blk.png" afterPath="$PROJECT_DIR$/staticfiles/images/inf-logo-blk.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/instagram.png" afterPath="$PROJECT_DIR$/staticfiles/images/instagram.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/snapchat.png" afterPath="$PROJECT_DIR$/staticfiles/images/snapchat.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/twitter.png" afterPath="$PROJECT_DIR$/staticfiles/images/twitter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staticfiles/images/yeezy-core-black-white.jpg" afterPath="$PROJECT_DIR$/staticfiles/images/yeezy-core-black-white.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InfluenceUApp/settings.py" afterPath="$PROJECT_DIR$/InfluenceUApp/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/stylesheets/style.css" afterPath="$PROJECT_DIR$/static/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/templates/verification/register.html" afterPath="$PROJECT_DIR$/static/templates/verification/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/models.py" afterPath="$PROJECT_DIR$/verification/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,6 +23,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="191" column="16" lean-forward="true" selection-start-line="189" selection-start-column="4" selection-end-line="191" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/verification/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,24 +48,22 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InfluenceUApp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="-1833">
               <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/templates/verification/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="165">
+              <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#label#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/verification/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -194,7 +162,6 @@
         <option value="$PROJECT_DIR$/vendor/registration/backends/hmac/urls.py" />
         <option value="$PROJECT_DIR$/InfluenceUApp/urls.py" />
         <option value="$PROJECT_DIR$/static/templates/verification/success.html" />
-        <option value="$PROJECT_DIR$/static/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/verification/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/templates/index.html" />
@@ -204,6 +171,7 @@
         <option value="$PROJECT_DIR$/djangosecure/check/run.py" />
         <option value="$PROJECT_DIR$/verification/models.py" />
         <option value="$PROJECT_DIR$/static/templates/verification/register.html" />
+        <option value="$PROJECT_DIR$/static/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -279,6 +247,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="verification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InfluenceUWebLaunch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InfluenceUWebLaunch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -630,7 +616,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486452194477</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="about to make big form changes">
+      <created>1486517167551</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1486517167551</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -700,7 +693,8 @@
     <MESSAGE value="Added user model" />
     <MESSAGE value="Everything is done except for email link verification" />
     <MESSAGE value="fuuuuck" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuuuuck" />
+    <MESSAGE value="about to make big form changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="about to make big form changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -957,14 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/stylesheets.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1044,18 +1030,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InfluenceUApp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verification/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1064,15 +1042,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/templates/verification/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="165">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#span#0;n#label#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#label#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#label#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfluenceUApp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1833">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="191" column="16" lean-forward="true" selection-start-line="189" selection-start-column="4" selection-end-line="191" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

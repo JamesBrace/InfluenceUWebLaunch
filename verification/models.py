@@ -47,7 +47,6 @@ class Account(AbstractBaseUser):
     first_name = models.CharField(max_length=40, blank=False, default="Steve")
     last_name = models.CharField(max_length=40, blank=False, default="Jobs")
 
-    birthdate = models.DateField(blank=False, default=datetime.date.today())
     country = models.CharField(max_length=40, blank=False, default="Canada")
 
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
