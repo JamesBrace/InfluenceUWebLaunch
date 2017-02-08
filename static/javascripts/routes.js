@@ -15,12 +15,12 @@
   * @desc Define valid application routes
   */
   function config($routeProvider) {
-    $routeProvider.when('/register', {
+    $routeProvider.when('/', {
       controller: 'RegisterController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/verification/register.html'
-    }).when('/redirect', {
-      templateUrl: '/static/templates/verification/redirect.html'
+    }).when('/activate/complete', {
+      templateUrl: '/static/templates/verification/activated.html'
     }).when('/success', {
       controller: 'ResendController',
       controllerAs: 'vm',

@@ -6,7 +6,7 @@
         <p>Didn't receive an email? Check your spam or </p>
         <button class = "btn btn-info btn-s" data-ng-click="vm.resend()" data-toggle="modal" data-target="#myModal"> Resend </button>
 
-        <div class="notice"><small> NOTICE: You need to verify your raffle entry within the next day or it will be discarded. YOU WILL NOT BE ABLE TO SUBMIT ANOTHER ENTRY WITH THE SAME EMAIL ADDRESS.</small></div>
+        <div class="notice"><small> NOTICE: You need to verify your raffle entry within the next day or it will be discarded.</small></div>
     </div>
 
     <!-- Modal -->
@@ -29,3 +29,13 @@
       </div>
     </div>
 </div>
+
+<script>
+      $(document).ready(function(){
+
+            var divs = $('.target');
+
+            divs.hide();
+      });
+
+</script>

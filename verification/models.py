@@ -21,20 +21,12 @@ class AccountManager(BaseUserManager):
 
         account = self.model(
             email=self.normalize_email(email),
-            first_name=kwargs.get('first_name'),
-            last_name=kwargs.get('last_name'),
-            phone_number=kwargs.get('phone_number'),
-            birthdate=kwargs.get('birthdate'),
-            country=kwargs.get('country'),
-            shoe_size=kwargs.get('shoe_size'),
-            buying_option=kwargs.get('buying_option')
+            full_name=kwargs.get('full_name'),
         )
 
         account.special_key = User.objects.make_random_password(length=6, allowed_chars='0123456789')
 
         account.set_password(password)
-
-        print(account.password)
 
         account.save()
 
@@ -42,12 +34,9 @@ class AccountManager(BaseUserManager):
 
 
 class Account(AbstractBaseUser):
-    email = models.EmailField(unique=True, blank=False)
+    email = models.EmailField(unique=False, blank=False)
 
-    first_name = models.CharField(max_length=40, blank=False, default="Steve")
-    last_name = models.CharField(max_length=40, blank=False, default="Jobs")
-
-    country = models.CharField(max_length=40, blank=False, default="Canada")
+    full_name = models.CharField(max_length=40, blank=False, default="Fake Name")
 
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                                  message="Phone number must be entered in the format: '+999999999'. "
@@ -59,19 +48,17 @@ class Account(AbstractBaseUser):
     is_valid = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
 
-    shoe_size = models.IntegerField(max_length=2, blank=False, )
-    buying_option = models.CharField(max_length=40, blank=False, default="Store")
-    #has_submitted_shoe = models.BooleanField(default=False)
+    shoe_size = models.IntegerField(blank=True, null=True)
+    buying_option = models.CharField(max_length=40, blank=True, default="Store")
+    has_submitted_shoe = models.BooleanField(default=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    #delete_at = models.DateTimeField()
-
     objects = AccountManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name']
+    REQUIRED_FIELDS = ['full_name', 'email']
 
     def __unicode__(self):
         return self.email

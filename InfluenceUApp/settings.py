@@ -32,15 +32,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangosecure',
+    #'djangosecure',
     'rest_framework',
     'compressor',
     'verification',
     'django.contrib.sites',
+    'anymail',
 )
 
 MIDDLEWARE_CLASSES = (
-    'djangosecure.middleware.SecurityMiddleware',
+    #'djangosecure.middleware.SecurityMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.http.ConditionalGetMiddleware',
@@ -51,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'csp.middleware.CSPMiddleware',
+    #'csp.middleware.CSPMiddleware',
 )
 
 ROOT_URLCONF = 'InfluenceUApp.urls'
@@ -166,26 +167,27 @@ REST_FRAMEWORK = {
     )
 }
 
+EMAIL_BACKEND = "anymail.backends.postmark.EmailBackend"
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'luxahrlite@gmail.com'
-EMAIL_HOST_PASSWORD = 'BixbyMontreal1995'
-EMAIL_PORT = 587
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ANYMAIL = {
+
+    "POSTMARK_SERVER_TOKEN": "0063cf73-3ed6-4e5b-adfe-16648fb9e300",
+}
+
+DEFAULT_FROM_EMAIL = "hello@influenceu.com"
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
 # Security
-SECURE_FRAME_DENY = True
-SECURE_SSL_REDIRECT = True
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_BROWSER_XSS_FILTER = True
-SESSION_COOKIE_SECURE = True
-SESSION_COOKIE_HTTPONLY = True
+# SECURE_FRAME_DENY = True
+# SECURE_SSL_REDIRECT = False
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_BROWSER_XSS_FILTER = True
+# SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_HTTPONLY = True
 
 CSP_DEFAULT_SRC = "'self'"
 CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'", 'code.jquery.com', 'www.google-analytics.com', 'cdnjs.cloudflare.com',
@@ -213,4 +215,6 @@ TWILIO_DEFAULT_CALLERID = 'InfluenceU'
 #EMAIL VERIFICATION
 ACCOUNT_ACTIVATION_DAYS = 1
 REGISTRATION_OPEN = True
+
+
 

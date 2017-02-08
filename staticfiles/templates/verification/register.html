@@ -6,49 +6,31 @@
       <div class="col-md-5">
         <div class="well">
           <form role="form" id="registrationForm" name="registrationForm" novalidate data-ng-submit="vm.register(registrationForm.$valid)" data-ng-disabled="vm.isSaving" class="form-horizontal">
-            <h4 id="regerror">{{ vm.message }}</h4>
+            <h4 id="regerror" style="color:red">{{ vm.message }}</h4>
             <div class="alert-danger" ng-if="flash" ng-bind="flash.message"></div>
             <div class="form-group">
-              <label for="register__first_name" class="control-label col-sm-4">First Name:</label>
+              <label for="register__full_name" class="control-label col-sm-4">Full name: <span style="color:red">*</span></label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="register__first_name" data-ng-model="vm.first_name" name="first_name" required/>
+                <input type="text" class="form-control" id="register__full_name" data-ng-model="vm.full_name" name="full_name" required/>
               </div>
             </div>
             <div class="form-group">
-              <label for="register__last_name" class="control-label col-sm-4">Last Name:</label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="register__last_name" data-ng-model="vm.last_name" name="last_name" required/>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-sm-4" for="register__email">Email:</label>
+              <label class="control-label col-sm-4" for="register__email">Email: <span style="color:red">*</span></label>
               <div class="col-sm-8">
                 <input type="email" class="form-control" name="email" id="email" data-ng-model="vm.email" required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-sm-4" for="password">Password * :</label>
+                <label class="control-label col-sm-4" for="password">Password: <span style="color:red">*</span></label>
               <div class="col-sm-8">
                 <input type="password" class="form-control" name="password" id="password" data-ng-model="vm.password" required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-sm-4" for="confirm_password">Confirm Password:</label>
-              <div class="col-sm-8">
-                <input type="password" class="form-control" name="confirm_password" id="confirm_password" data-ng-model="vm.confirm_password" required/>
-              </div>
-            </div>
-            <!--<div vc-recaptcha
-                theme="'light'"
-                key="model.key"
-                on-create="setWidgetId(widgetId)"
-                on-success="setResponse(response)"
-                on-expire="cbExpiration()"></div> -->
-            <div class="form-group">
               <button data-ng-disabled="registrationForm.$invalid" type="submit" class="btn submit btn-primary" id="submit_btn">Submit <i ng-show="vm.submitted" class="fa fa-spinner fa-pulse fa-fw"></i></button>
             </div>
           </form>
-            <small> * Make sure you take note of your account information, you will need it to claim your shoes!</small>
+            <small><strong>Make sure you take note of your account information, you will need it to claim your shoes!</strong></small>
         </div>
       </div>
   </div>
@@ -75,21 +57,12 @@
                             maxlength: 15,
                             pwcheck: true
 
-                         } ,
-
-                         confirm_password: {
-                            required: true,
-                            equalTo: "#password"
                          }
                      },
                messages:{
                    password: {
                            required:"A password is required!"
-
-                         },
-                   confirm_password: {
-                            equalTo: "Passwords do not match!"
-                          }
+                         }
                }
              });
 

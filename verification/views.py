@@ -16,6 +16,12 @@ from verification.models import Account
 from verification.permissions import IsAccountOwner
 from verification.serializers import AccountSerializer, ResponseSerializer
 
+from django.core.mail import EmailMessage
+
+from django.urls import reverse
+
+
+
 
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
@@ -34,8 +40,7 @@ class AccountViewSet(viewsets.ModelViewSet):
         TimestampSigner, with HMAC verification on activation.
 
     """
-    email_body_template = 'registration/activation_email.txt'
-    email_subject_template = 'registration/activation_email_subject.txt'
+
 
     # def register(self, form):
     #
@@ -73,7 +78,6 @@ class AccountViewSet(viewsets.ModelViewSet):
         Build the template context used for the activation email.
 
         """
-        print(settings.ACCOUNT_ACTIVATION_DAYS);
 
         return {
             'activation_key': activation_key,
@@ -93,14 +97,26 @@ class AccountViewSet(viewsets.ModelViewSet):
             'user': user
         })
 
-        subject = render_to_string(self.email_subject_template,
-                                   context)
-        # Force subject to a single line to avoid header-injection
-        # issues.
-        subject = ''.join(subject.splitlines())
-        message = render_to_string(self.email_body_template,
-                                   context)
-        send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email])
+        action_url = "https://yeezy-red.appspot.com" + reverse('registration_activate', kwargs={'activation_key':activation_key})
+
+        message = EmailMessage(
+            subject=None,
+            body=None,
+            to=[user.email],  #
+        )
+        message.template_id = 1288922  # use this Postmark template
+
+        message.merge_global_data = {
+            'name': user.full_name,
+            'action_url': action_url
+        }
+
+        message.send()
+
+
+        #message.send()
+
+
 
     def get_permissions(self):
         if self.request.method in permissions.SAFE_METHODS:
@@ -122,7 +138,7 @@ class AccountViewSet(viewsets.ModelViewSet):
                 'message': 'Email has already been registered.'
             }, status=status.HTTP_400_BAD_REQUEST)
 
-        elif serializer.is_valid():
+        if serializer.is_valid():
             account = self.create_inactive_user(**serializer.validated_data)
             signals.user_registered.send(sender=self.__class__,
                                          user=account,
@@ -245,12 +261,22 @@ class ResendView(views.APIView):
             'user': user
         })
 
-        subject = render_to_string(self.email_subject_template,
-                                   context)
-        # Force subject to a single line to avoid header-injection
-        # issues.
-        subject = ''.join(subject.splitlines())
-        message = render_to_string(self.email_body_template,
-                                   context)
-        send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email])
+        action_url = "https://yeezy-red.appspot.com" + reverse('registration_activate',
+                                                               kwargs={'activation_key': activation_key})
+
+        print(action_url)
+
+        message = EmailMessage(
+            subject=None,
+            body=None,
+            to=[user.email],  #
+        )
+        message.template_id = 1288922  # use this Postmark template
+
+        message.merge_global_data = {
+            'name': user.full_name,
+            'action_url': action_url
+        }
+
+        message.send()
 

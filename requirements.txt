@@ -16,3 +16,4 @@ twilio==5.7.0
 django-csp==3.1
 django-registration==2.2
 django-sslserver==0.19
+requests==2.13.0

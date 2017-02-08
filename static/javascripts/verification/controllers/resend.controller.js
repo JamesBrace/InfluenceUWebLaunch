@@ -41,12 +41,7 @@
 
         // If the user is not registered, they should not be here.
         if (!Verification.isRegistered()) {
-            $location.url('/register');
-        }
-
-        // if the user is not logged in, they should not be here.
-        if (!Verification.isAuthenticated()) {
-            $location.url('/redirect');
+            $location.url('/');
         }
     }
 
