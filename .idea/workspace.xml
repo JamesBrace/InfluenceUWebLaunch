@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640c5738-a395-456e-b9a9-68149bc45627" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/views.py" afterPath="$PROJECT_DIR$/verification/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +58,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
+            <state relative-caret-position="70">
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
@@ -1077,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/verification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
+        <state relative-caret-position="70">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>
