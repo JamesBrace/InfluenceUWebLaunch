@@ -1,59 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="640c5738-a395-456e-b9a9-68149bc45627" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/de/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/es/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/fr/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/ka/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/nb/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/pl/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/pt_BR/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/ru/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/zh/LC_MESSAGES/django.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/de/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/es/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/fr/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/ka/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/nb/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/pl/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/pt_BR/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/ru/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/locale/zh/LC_MESSAGES/django.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/signals.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/recovery_done.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/recovery_email.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/recovery_email_subject.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/recovery_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/reset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/templates/password_reset/reset_sent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/templates/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/tests/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_reset/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/javascripts/verification/controllers/login.controller.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/navbar.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+    <list default="true" id="640c5738-a395-456e-b9a9-68149bc45627" name="Default" comment="about to make big form changes">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InfluenceUApp/settings.py" afterPath="$PROJECT_DIR$/InfluenceUApp/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InfluenceUApp/urls.py" afterPath="$PROJECT_DIR$/InfluenceUApp/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/routes.js" afterPath="$PROJECT_DIR$/static/javascripts/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/verification/services/verification.service(nonmin).js" afterPath="$PROJECT_DIR$/static/javascripts/verification/services/verification.service(nonmin).js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/templates/verification/login.html" afterPath="$PROJECT_DIR$/static/templates/verification/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/javascripts.html" afterPath="$PROJECT_DIR$/templates/javascripts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/models.py" afterPath="$PROJECT_DIR$/verification/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/serializers.py" afterPath="$PROJECT_DIR$/verification/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/views.py" afterPath="$PROJECT_DIR$/verification/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/static/templates/verification/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -98,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/static/javascripts/verification/controllers/login.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
-              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+              <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -108,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/verification/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -118,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/verification/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+              <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,11 +76,9 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InfluenceUApp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,10 +97,8 @@
         <entry file="file://$PROJECT_DIR$/verification/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="121">
-              <caret line="110" column="55" lean-forward="false" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+              <caret line="107" column="55" lean-forward="false" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,8 +107,10 @@
         <entry file="file://$PROJECT_DIR$/static/javascripts/verification/services/verification.service(nonmin).js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3611">
-              <caret line="308" column="59" lean-forward="false" selection-start-line="308" selection-start-column="59" selection-end-line="308" selection-end-column="59" />
-              <folding />
+              <caret line="308" column="61" lean-forward="false" selection-start-line="308" selection-start-column="61" selection-end-line="308" selection-end-column="61" />
+              <folding>
+                <marker date="1486618123000" expanded="true" signature="3810:4335" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -739,7 +686,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486517167551</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="about to make big form changes">
+      <created>1486618125592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1486618125592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -804,13 +758,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added user model" />
     <MESSAGE value="Everything is done except for email link verification" />
     <MESSAGE value="fuuuuck" />
     <MESSAGE value="about to make big form changes" />
     <option name="LAST_COMMIT_MESSAGE" value="about to make big form changes" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1047,7 +1004,7 @@
     <entry file="file://$PROJECT_DIR$/verification/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1074,9 +1031,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="98" column="45" lean-forward="true" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,11 +1085,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/InfluenceUApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,18 +1110,18 @@
     <entry file="file://$PROJECT_DIR$/verification/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
-          <caret line="110" column="55" lean-forward="false" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <caret line="107" column="55" lean-forward="false" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/javascripts/verification/services/verification.service(nonmin).js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3611">
-          <caret line="308" column="59" lean-forward="false" selection-start-line="308" selection-start-column="59" selection-end-line="308" selection-end-column="59" />
-          <folding />
+          <caret line="308" column="61" lean-forward="false" selection-start-line="308" selection-start-column="61" selection-end-line="308" selection-end-column="61" />
+          <folding>
+            <marker date="1486618123000" expanded="true" signature="3810:4335" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,7 +1136,7 @@
     <entry file="file://$PROJECT_DIR$/verification/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+          <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1191,7 +1144,7 @@
     <entry file="file://$PROJECT_DIR$/static/templates/verification/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1202,7 +1155,7 @@
     <entry file="file://$PROJECT_DIR$/static/javascripts/verification/controllers/login.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
           <folding />
         </state>
       </provider>
