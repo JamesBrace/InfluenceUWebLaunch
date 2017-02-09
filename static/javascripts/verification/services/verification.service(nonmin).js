@@ -27,8 +27,11 @@
         register: register,
         getRegisteredUser: getRegisteredUser,
         isRegistered: isRegistered,
-        isAuthenticated: isAuthenticated,
         resend: resend,
+        login: login,
+        isAuthenticated: isAuthenticated,
+        getAuthenticatedAccount: getAuthenticatedAccount,
+        setAuthenticatedAccount: setAuthenticatedAccount,
     };
 
     return Verification;
@@ -116,6 +119,33 @@
 
 
     ////////////////////
+
+      /**
+       * @name login
+       * @desc Try to login
+       * @param {string} email address of user
+       * @param {string} password of user
+       * @param {function} callback function
+       * @returns {Promise}
+       * @memberOf verification.services.Verification
+       */
+      function login(email, password, callback) {
+          return $http.post('/api/v1/auth/login/', {
+              email: email,
+              password: password
+          }).then(function (data, status, headers, config) {
+              Verification.setAuthenticatedAccount(data.data);
+              window.location = '/verify';
+          }, function (response) {
+              var response_;
+              response_ = {success: false, message: response.data.message};
+              callback(response_);
+              console.error('Epic failure!');
+          });
+      }
+
+
+      ////////////////////
 
     // /**
     // * @name resend
@@ -244,30 +274,48 @@
         return !!getRegisteredUser();
     }
 
-    /**
+      /**
      * @name getAuthenticatedAccount
      * @desc Return the currently authenticated account
      * @returns {object|undefined} Account if authenticated, else `undefined`
      * @memberOf verification.services.Verification
      */
+
     function getAuthenticatedAccount() {
 
-        if (!$cookies.get('AuthenticatedAccount')){
+          //console.log($cookies.getObject('authenticatedAccount'));
+          if (!$cookies.get('authenticatedAccount')) {
             return;
         }
 
-        return $cookies.getObject('AuthenticatedAccount');
+          return $cookies.getObject('authenticatedAccount');
+          //return JSON.parse($cookies.authenticatedAccount);
     }
-
     /**
-     * @name isRegistered
-     * @desc Check if the current user is registered
-     * @returns {boolean} True is user is registered, else false.
+     * @name isAuthenticated
+     * @desc Check if the current user is authenticated
+     * @returns {boolean} True is user is authenticated, else false.
      * @memberOf verification.services.Verification
      */
     function isAuthenticated() {
-        // return !!getAuthenticatedAccount();
-        return true;
+        //console.log("account:" + getAuthenticatedAccount());
+
+        return !!getAuthenticatedAccount();
+    }
+
+      /**
+       * @name setAuthenticatedAccount
+       * @desc Stringify the account object and store it in a cookie
+       * @param {Object} user The account object to be stored
+       * @returns {undefined}
+       * @memberOf verification.services.Verification
+       */
+
+      function setAuthenticatedAccount(account) {
+
+          $cookies.putObject('authenticatedAccount', account);
+          //$cookies.authenticatedAccount = "authenticated";
+          //console.log($cookies.getObject('authenticatedAccount'));
     }
   }
 })();

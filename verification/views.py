@@ -1,27 +1,17 @@
-from rest_framework import permissions, viewsets, status, views
-from rest_framework.response import Response
-from django.core.mail import send_mail
-
 from django.conf import settings
-from django.contrib.auth import get_user_model
+from django.contrib.auth import authenticate, login
 from django.contrib.sites.shortcuts import get_current_site
 from django.core import signing
-from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
+from django.urls import reverse
+from rest_framework import permissions, viewsets, status, views
+from rest_framework.response import Response
 
 from vendor.registration import signals
 from vendor.registration.views import ActivationView as BaseActivationView
-from django.contrib.sites.requests import RequestSite
-
 from verification.models import Account
 from verification.permissions import IsAccountOwner
-from verification.serializers import AccountSerializer, ResponseSerializer
-
-from django.core.mail import EmailMessage
-
-from django.urls import reverse
-
-
-
+from verification.serializers import AccountSerializer, ResponseSerializer, LoginSerializer
 
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
@@ -280,3 +270,46 @@ class ResendView(views.APIView):
 
         message.send()
 
+
+class LoginView(views.APIView):
+    def post(self, request, format=None):
+        data = request.data
+        email = data.get('email', None)
+        password = data.get('password', None)
+
+        exists = Account.objects.filter(email=email).exists()
+
+        if not exists:
+            return Response({
+                'status': 'Unauthorized',
+                'message': 'We do not have an account under this email.'
+            }, status=status.HTTP_401_UNAUTHORIZED)
+
+        temp = Account.objects.get(email=email)
+
+        if not temp.is_active:
+            return Response({
+                'status': 'Unauthorized',
+                'message': 'You have to verify your email before logging in.'
+            }, status=status.HTTP_401_UNAUTHORIZED)
+
+        account = authenticate(email=email, password=password)
+
+        # fail, bad login info
+        if account is None:
+            return Response({
+                'status': 'Unauthorized',
+                'message': 'Username/password combination invalid.'
+            }, status=status.HTTP_401_UNAUTHORIZED)
+
+        # fail, inactive account
+        if not account.is_active:
+            return Response({
+                'status': 'Unauthorized',
+                'message': 'This account has not been email verified.'
+            }, status=status.HTTP_401_UNAUTHORIZED)
+
+        # success, login and respond
+        login(request, account)
+        serialized = LoginSerializer(account)
+        return Response(serialized.data, status=status.HTTP_201_CREATED)

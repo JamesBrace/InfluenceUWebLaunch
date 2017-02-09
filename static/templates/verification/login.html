@@ -6,8 +6,8 @@
   <div style = "max-width: 540px;" class="container">
         <div class="well">
           <form role="form" id="loginForm" name="loginForm" novalidate data-ng-submit="vm.login(loginForm.$valid)" data-ng-disabled="vm.isSaving" class="form-horizontal">
-            <h4 id="regerror" style="color:red">{{ vm.message }}</h4>
-            <div class="alert-danger" ng-if="flash" ng-bind="flash.message"></div>
+              <h4 id="regerror" style="color:red;">{{ vm.message }}</h4>
+              <div class="alert-danger" ng-if="flash" style="margin-bottom: 3%" ng-bind="flash.message"></div>
             <div class="form-group">
               <label class="control-label col-sm-4" for="login-email">Email: <span style="color:red">*</span></label>
               <div class="col-sm-8">
@@ -20,7 +20,8 @@
                 <input type="password" class="form-control" name="password" id="password" data-ng-model="vm.password" required/>
               </div>
             </div>
-            <div class="form-group">
+              <a href="/forgot-password/recover/" onclick="window.location.reload(true);">Forgot password?</a>
+              <div style="margin-top: 3%" class="form-group">
               <button data-ng-disabled="loginForm.$invalid" type="submit" class="btn submit btn-primary" id="submit_btn">Login <i ng-show="vm.submitted" class="fa fa-spinner fa-pulse fa-fw"></i></button>
             </div>
           </form>
@@ -28,8 +29,14 @@
   </div>
 </div>
 <script>
+
 $(document).ready(function(){
     var form = $('#loginForm');
     form.validate();
+
+    var divs = $('.target');
+
+    divs.hide();
+
 });
 </script>

@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'verification',
     'django.contrib.sites',
     'anymail',
+    'password_reset',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,42 +64,39 @@ WSGI_APPLICATION = 'InfluenceUApp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
-    # Running on production App Engine, so connect to Google Cloud SQL using
-    # the unix socket at /cloudsql/<your-cloudsql-connection string>
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'OPTIONS': {
-                'sql_mode': 'traditional',
-            },
-            'HOST': '/cloudsql/yeezy-red:us-central1:yeezy-red-mysql',
-            'NAME': 'accounts',
-            'USER': 'root',
-            'PASSWORD': 'Sophie1995',
-        }
-    }
-else:
+#
+# if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+#     # Running on production App Engine, so connect to Google Cloud SQL using
+#     # the unix socket at /cloudsql/<your-cloudsql-connection string>
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'OPTIONS': {
+#                 'sql_mode': 'traditional',
+#             },
+#             'HOST': '/cloudsql/yeezy-red:us-central1:yeezy-red-mysql',
+#             'NAME': 'accounts',
+#             'USER': 'root',
+#             'PASSWORD': 'Sophie1995',
+#         }
+#     }
+# else:
     # Running locally so connect to either a local MySQL instance or connect to
     # Cloud SQL via the proxy. To start the proxy via command line:
     #
     #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
     #
     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'OPTIONS': {
-                'sql_mode': 'traditional',
-            },
-            'HOST': '127.0.0.1',
-            'PORT': '3306',
-            'NAME': 'accounts',
-            'USER': 'root',
-            'PASSWORD': 'Sophie1995',
-        }
-    }
+
+
+
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+    )
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -168,6 +166,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     )
 }
+
+AUTH_USER_MODEL = 'verification.Account'
 
 EMAIL_BACKEND = "anymail.backends.postmark.EmailBackend"
 

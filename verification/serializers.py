@@ -1,7 +1,4 @@
-
 from rest_framework import serializers
-from django.contrib.auth import update_session_auth_hash
-
 
 from verification.models import Account
 
@@ -21,3 +18,9 @@ class AccountSerializer(serializers.ModelSerializer):
 class ResponseSerializer(serializers.Serializer):
     email = serializers.EmailField()
     full_name = serializers.CharField(max_length=40)
+
+
+class LoginSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    full_name = serializers.CharField(max_length=40)
+    special_key = serializers.CharField(max_length=40)

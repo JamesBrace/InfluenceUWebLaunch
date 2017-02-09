@@ -1,10 +1,7 @@
 from __future__ import unicode_literals
 
-
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, User
 from django.core.validators import RegexValidator
-import datetime
-
 from django.db import models
 
 
@@ -108,7 +105,7 @@ class DeliveryManager(BaseUserManager):
 
 
 class Account(AbstractBaseUser):
-    email = models.EmailField(unique=False, blank=False)
+    email = models.EmailField(unique=True, blank=False, )
 
     full_name = models.CharField(max_length=40, blank=False, default="Fake Name")
 
@@ -135,7 +132,7 @@ class Account(AbstractBaseUser):
     objects = AccountManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['full_name', 'email']
+    REQUIRED_FIELDS = ['full_name']
 
     def __unicode__(self):
         return self.email
@@ -170,7 +167,7 @@ class StoreAccount(AbstractBaseUser):
     objects = StoreManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['full_name', 'email', 'phone_number', 'special_key', 'is_valid', 'shoe_size', 'country',
+    REQUIRED_FIELDS = ['full_name', 'phone_number', 'special_key', 'is_valid', 'shoe_size', 'country',
                        'birth_date', 'gender']
 
     def __unicode__(self):
@@ -205,7 +202,7 @@ class DeliveryAccount(AbstractBaseUser):
     objects = DeliveryManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['full_name', 'email', 'phone_number', 'special_key', 'is_valid', 'shoe_size', 'country',
+    REQUIRED_FIELDS = ['full_name', 'phone_number', 'special_key', 'is_valid', 'shoe_size', 'country',
                        'birth_date', 'gender']
 
     def __unicode__(self):
