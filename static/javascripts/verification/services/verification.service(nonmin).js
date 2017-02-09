@@ -32,6 +32,7 @@
         isAuthenticated: isAuthenticated,
         getAuthenticatedAccount: getAuthenticatedAccount,
         setAuthenticatedAccount: setAuthenticatedAccount,
+        update: update,
     };
 
     return Verification;
@@ -135,6 +136,35 @@
               password: password
           }).then(function (data, status, headers, config) {
               Verification.setAuthenticatedAccount(data.data);
+              window.location = '/user-info';
+          }, function (response) {
+              var response_;
+              response_ = {success: false, message: response.data.message};
+              callback(response_);
+              console.error('Epic failure!');
+          });
+      }
+
+
+      ////////////////////
+
+      /**
+       * @name update
+       * @desc Try to update
+       * @returns {Promise}
+       * @memberOf verification.services.Verification
+       */
+      function update(country, phone, gender, size, option, callback) {
+          var temp = getAuthenticatedAccount();
+          var email = temp.email;
+          return $http.post('/api/v1/auth/update/', {
+              email: email,
+              country: country,
+              phone: phone,
+              gender: gender,
+              size: size,
+              option: option
+          }).then(function (data, status, headers, config) {
               window.location = '/verify';
           }, function (response) {
               var response_;

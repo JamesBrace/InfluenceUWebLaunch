@@ -24,3 +24,14 @@ class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     full_name = serializers.CharField(max_length=40)
     special_key = serializers.CharField(max_length=40)
+
+
+class UpdateSerializer(serializers.Serializer):
+    phone_number = serializers.CharField(max_length=15)
+    shoe_size = serializers.IntegerField()
+    country = serializers.CharField(max_length=40)
+    birth_date = serializers.CharField(max_length=20)
+    gender = serializers.CharField(max_length=1)
+    email = serializers.EmailField()
+    full_name = serializers.CharField(max_length=40, required=False)
+    special_key = serializers.CharField(max_length=40, required=False)

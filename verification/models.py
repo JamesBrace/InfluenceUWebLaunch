@@ -174,7 +174,7 @@ class StoreAccount(AbstractBaseUser):
         return self.email
 
 
-class DeliveryAccount(AbstractBaseUser):
+class OnlineAccount(AbstractBaseUser):
     email = models.EmailField(unique=False, blank=False)
 
     full_name = models.CharField(max_length=40, blank=False, default="Fake Name")

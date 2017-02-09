@@ -25,6 +25,10 @@
         templateUrl: '/static/templates/verification/login.html',
         controller: 'LoginController',
       controllerAs: 'vm'
+    }).when('/user-info', {
+        controller: 'UserController',
+        controllerAs: 'vm',
+        templateUrl: '/static/templates/verification/user-info.html'
     }).when('/success', {
       controller: 'ResendController',
       controllerAs: 'vm',

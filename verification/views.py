@@ -9,9 +9,9 @@ from rest_framework.response import Response
 
 from vendor.registration import signals
 from vendor.registration.views import ActivationView as BaseActivationView
-from verification.models import Account
+from verification.models import Account, StoreAccount, OnlineAccount
 from verification.permissions import IsAccountOwner
-from verification.serializers import AccountSerializer, ResponseSerializer, LoginSerializer
+from verification.serializers import AccountSerializer, ResponseSerializer, LoginSerializer, UpdateSerializer
 
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
@@ -102,11 +102,6 @@ class AccountViewSet(viewsets.ModelViewSet):
         }
 
         message.send()
-
-
-        #message.send()
-
-
 
     def get_permissions(self):
         if self.request.method in permissions.SAFE_METHODS:
@@ -313,3 +308,71 @@ class LoginView(views.APIView):
         login(request, account)
         serialized = LoginSerializer(account)
         return Response(serialized.data, status=status.HTTP_201_CREATED)
+
+
+class UpdateView(viewsets.ModelViewSet):
+    serializer_class = UpdateSerializer
+
+    def get_permissions(self):
+        if self.request.method in permissions.SAFE_METHODS:
+            return permissions.AllowAny(),
+        if self.request.method == 'POST':
+            return permissions.AllowAny(),
+        return permissions.IsAuthenticated(), IsAccountOwner()
+
+    def create(self, request):
+        serializer = self.serializer_class(data=request.data)
+
+        data = request.data
+        option = data.get('option')
+        email = data.get('email')
+
+        account = Account.objects.get(email=email)
+
+        serializer.full_name = account.full_name
+        serializer.secret_key = account.secret_key
+
+        in_store = option == "in_store"
+
+        if in_store:
+            if serializer.is_valid():
+                store_account = StoreAccount.objects.create_user(**serializer.validated_data)
+                serialized = ResponseSerializer(store_account)
+
+                # add twilio shit here
+
+                return Response(serialized.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response("Error in updating account", status=status.HTTP_400_BAD_REQUEST)
+        else:
+            if serializer.is_valid():
+                online_account = OnlineAccount.objects.create_user(**serializer.validated_data)
+                serialized = ResponseSerializer(online_account)
+
+                # add twilio shit here
+
+                return Response(serialized.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response("Error in updating account", status=status.HTTP_400_BAD_REQUEST)
+
+
+class VerifyView(views.APIView):
+    def post(self, request, format=None):
+        data = request.data
+        special_key = data.get('special_key', None)
+        email = data.get('email', None)
+
+        temp = Account.objects.get(email=email)
+        temp_special_key = temp.special_key
+
+        if special_key == temp_special_key:
+            temp.is_valid = True
+            return Response({
+                'status': True,
+                'message': 'You have been successfully verified!'
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response({
+                'status': 'Unauthorized',
+                'message': 'Invalid code, try again.'
+            }, status=status.HTTP_401_UNAUTHORIZED)
