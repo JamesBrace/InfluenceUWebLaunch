@@ -1,0 +1,35 @@
+<div class="header">
+   <h3><strong>Login</strong></h3>
+   <p>Log in using the email you previously registered with.</p>
+</div>
+<div class="supporting-form">
+  <div style = "max-width: 540px;" class="container">
+        <div class="well">
+          <form role="form" id="loginForm" name="loginForm" novalidate data-ng-submit="vm.login(loginForm.$valid)" data-ng-disabled="vm.isSaving" class="form-horizontal">
+            <h4 id="regerror" style="color:red">{{ vm.message }}</h4>
+            <div class="alert-danger" ng-if="flash" ng-bind="flash.message"></div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="login-email">Email: <span style="color:red">*</span></label>
+              <div class="col-sm-8">
+                <input type="email" class="form-control" name="login-email" id="email" data-ng-model="vm.email" required/>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="password">Password: <span style="color:red">*</span></label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" name="password" id="password" data-ng-model="vm.password" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <button data-ng-disabled="loginForm.$invalid" type="submit" class="btn submit btn-primary" id="submit_btn">Login <i ng-show="vm.submitted" class="fa fa-spinner fa-pulse fa-fw"></i></button>
+            </div>
+          </form>
+        </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+    var form = $('#loginForm');
+    form.validate();
+});
+</script>
