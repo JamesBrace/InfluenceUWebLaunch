@@ -21,6 +21,10 @@
       templateUrl: '/static/templates/verification/register.html'
     }).when('/activate/complete', {
       templateUrl: '/static/templates/verification/activated.html'
+    }).when('0caae4fd7d905316ac58cdcb5dd04600', {
+      templateUrl: '/static/templates/verification/activated.html',
+      controller: 'VerifyController',
+      controllerAs: 'vm'
     }).when('/success', {
       controller: 'ResendController',
       controllerAs: 'vm',
