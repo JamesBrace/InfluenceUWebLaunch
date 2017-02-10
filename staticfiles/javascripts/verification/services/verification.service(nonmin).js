@@ -27,8 +27,15 @@
         register: register,
         getRegisteredUser: getRegisteredUser,
         isRegistered: isRegistered,
-        isAuthenticated: isAuthenticated,
         resend: resend,
+        login: login,
+        isAuthenticated: isAuthenticated,
+        getAuthenticatedAccount: getAuthenticatedAccount,
+        isUpdated: isUpdated,
+        getUpdatedUser: getUpdatedUser,
+        setAuthenticatedAccount: setAuthenticatedAccount,
+        update: update,
+        verify: verify,
     };
 
     return Verification;
@@ -117,73 +124,61 @@
 
     ////////////////////
 
-    // /**
-    // * @name resend
-    // * @desc Try to resend verification email
-    // * @param {string} email address of user
-    // * @returns {Promise}
-    // * @memberOf verification.services.Verification
-    // */
-    // function recaptcha(token) {
-    //   return $http.post('https://www.google.com/recaptcha/api/siteverify', {
-    //     secret: '6LeYYRQUAAAAAAwClb2avgMj9zPLisORmOsDvgSW',
-    //     response: token
-    //   }).then(verifySuccessFn, verifyErrorFn);
-    //
-    //     /**
-    //      * @name verifySuccessFn
-    //      * @desc Take to options page
-    //      */
-    //     function verifySuccessFn(data, status, headers, config) {
-    //         window.location.reload();
-    //     }
-    //
-    //     /**
-    //      * @name verifyErrorFn
-    //      * @desc Log "Epic failure!" to the console and notifies user
-    //      */
-    //     function verifyErrorFn(data, status, headers, config) {
-    //         console.error('Verification failure!');
-    //         notify(data.data);
-    //     }
-    // }
-    //
-    // ////////////////////
-    //
-    // /**
-    // * @name verify
-    // * @desc Try to verify a raffle entry
-    // * @param {string} verification code received by SMS
-    // * @returns {Promise}
-    // * @memberOf verification.services.Verification
-    // */
-    // function verify(code) {
-    //   var data = getRegisteredUser();
-    //   var email = data.email;
-    //
-    //   return $http.post('/api/v1/verify/', {
-    //     email: email,
-    //     verification_code: code
-    //   }).then(verifySuccessFn, verifyErrorFn);
-    //
-    //     /**
-    //      * @name verifySuccessFn
-    //      * @desc Take to options page
-    //      */
-    //     function verifySuccessFn(data, status, headers, config) {
-    //         $cookies.putObject('verifiedUser', data.data);
-    //         window.location = '/options';
-    //     }
-    //
-    //     /**
-    //      * @name verifyErrorFn
-    //      * @desc Log "Epic failure!" to the console and notifies user
-    //      */
-    //     function verifyErrorFn(data, status, headers, config) {
-    //         console.error('Verification failure!');
-    //         notify(data.data);
-    //     }
-    // }
+      /**
+       * @name login
+       * @desc Try to login
+       * @param {string} email address of user
+       * @param {string} password of user
+       * @param {function} callback function
+       * @returns {Promise}
+       * @memberOf verification.services.Verification
+       */
+      function login(email, password, callback) {
+          return $http.post('/api/v1/auth/login/', {
+              email: email,
+              password: password
+          }).then(function (data, status, headers, config) {
+              Verification.setAuthenticatedAccount(data.data);
+              window.location = '/user-info';
+          }, function (response) {
+              var response_;
+              response_ = {success: false, message: response.data.message};
+              callback(response_);
+              console.error('Epic failure!');
+          });
+      }
+
+
+      ////////////////////
+
+      /**
+       * @name update
+       * @desc Try to update
+       * @returns {Promise}
+       * @memberOf verification.services.Verification
+       */
+      function update(country, phone, gender, size, option, callback) {
+          var temp = getAuthenticatedAccount();
+          var email = temp.email;
+          console.log(email + " " + country + " " + phone + " " + gender + " " + size + " " + option);
+          return $http.post('/api/v1/auth/update/', {
+              email: email,
+              country: country,
+              phone: phone,
+              gender: gender,
+              size: size,
+              option: option
+          }).then(function (data, status, headers, config) {
+                $cookies.remove('authenticatedAccount');
+                $cookies.putObject('updatedAccount', email);
+                window.location = '/verify';
+          }, function (response) {
+              var response_;
+              response_ = {success: false, message: response.data.message};
+              callback(response_);
+              console.error('Epic failure!');
+          });
+      }
 
     ////////////////////
 
@@ -194,28 +189,34 @@
     * @returns {Promise}
     * @memberOf verification.services.Verification
     */
-    function verifyEmail(email) {
-
-      return $http.post('/api/v1/verifyemail/', {
+    function verify(code) {
+        var temp = getUpdatedUser();
+        var email = temp;
+        console.log(email);
+      return $http.post('api/v1/auth/verifyphone/', {
         email: email,
-      }).then(verifyEmailSuccessFn, verifyEmailErrorFn);
+        special_key: code,
+      }).then(verifySuccessFn, verifyErrorFn);
 
         /**
          * @name verifySuccessFn
          * @desc Take to options page
          */
-        function verifyEmailSuccessFn(data, status, headers, config) {
-            $cookies.putObject('registeredUser', data.data);
-            window.location = '/verify';
+        function verifySuccessFn(data, status, headers, config) {
+            $cookies.remove('updatedAccount');
+            $cookies.putObject('success', data.data);
+            window.location = '/complete';
         }
 
         /**
          * @name verifyErrorFn
          * @desc Log "Epic failure!" to the console and notifies user
          */
-        function verifyEmailErrorFn(data, status, headers, config) {
-            console.error('Verification failure!');
-            notify(data.data);
+        function verifyErrorFn(data, status, headers, config) {
+            var response_;
+              response_ = {success: false, message: response.data.message};
+              callback(response_);
+              console.error('Epic failure!');
         }
     }
 
@@ -234,6 +235,19 @@
         return $cookies.getObject('registeredUser');
     }
 
+
+    function getUpdatedUser() {
+
+        if (!$cookies.get('updatedAccount')){
+            return;
+        }
+
+        return $cookies.getObject('updatedAccount');
+    }
+
+    function isUpdated() {
+        return !!getUpdatedUser();
+    }
     /**
      * @name isRegistered
      * @desc Check if the current user is registered
@@ -244,30 +258,48 @@
         return !!getRegisteredUser();
     }
 
-    /**
+      /**
      * @name getAuthenticatedAccount
      * @desc Return the currently authenticated account
      * @returns {object|undefined} Account if authenticated, else `undefined`
      * @memberOf verification.services.Verification
      */
+
     function getAuthenticatedAccount() {
 
-        if (!$cookies.get('AuthenticatedAccount')){
+          //console.log($cookies.getObject('authenticatedAccount'));
+          if (!$cookies.get('authenticatedAccount')) {
             return;
         }
 
-        return $cookies.getObject('AuthenticatedAccount');
+          return $cookies.getObject('authenticatedAccount');
+          //return JSON.parse($cookies.authenticatedAccount);
     }
-
     /**
-     * @name isRegistered
-     * @desc Check if the current user is registered
-     * @returns {boolean} True is user is registered, else false.
+     * @name isAuthenticated
+     * @desc Check if the current user is authenticated
+     * @returns {boolean} True is user is authenticated, else false.
      * @memberOf verification.services.Verification
      */
     function isAuthenticated() {
-        // return !!getAuthenticatedAccount();
-        return true;
+        //console.log("account:" + getAuthenticatedAccount());
+
+        return !!getAuthenticatedAccount();
+    }
+
+      /**
+       * @name setAuthenticatedAccount
+       * @desc Stringify the account object and store it in a cookie
+       * @param {Object} user The account object to be stored
+       * @returns {undefined}
+       * @memberOf verification.services.Verification
+       */
+
+      function setAuthenticatedAccount(account) {
+
+          $cookies.putObject('authenticatedAccount', account);
+          //$cookies.authenticatedAccount = "authenticated";
+          //console.log($cookies.getObject('authenticatedAccount'));
     }
   }
 })();
