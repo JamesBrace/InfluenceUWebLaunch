@@ -16,12 +16,12 @@
   */
   function config($routeProvider) {
     $routeProvider.when('/', {
-      controller: 'RegisterController',
-      controllerAs: 'vm',
-      templateUrl: '/static/templates/verification/register.html'
-    }).when('/activate/complete', {
-      templateUrl: '/static/templates/verification/activated.html'
-    }).when('/test', {
+    //   controller: 'RegisterController',
+    //   controllerAs: 'vm',
+    //   templateUrl: '/static/templates/verification/register.html'
+    // }).when('/activate/complete', {
+    //   templateUrl: '/static/templates/verification/activated.html'
+    // }).when('/test', {
         templateUrl: '/static/templates/verification/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
