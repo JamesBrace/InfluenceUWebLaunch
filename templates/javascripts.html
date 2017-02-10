@@ -2,8 +2,8 @@
 {% load staticfiles %}
 
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+       <!-- integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"
         integrity="sha256-uUVS/d3xM3l8YmucAkj1DeRt6U4Y+Xv3ePUgVVEVmVw=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
@@ -22,6 +22,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-cookies.min.js"
         integrity="sha256-9cxsbQMTWat41FHa4tfff6XNcHi5nETV32vTPRriAlQ=" crossorigin="anonymous"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"
+        integrity="sha256-H7Mu9l17V/M6Q1gDKdv27je+tbS2QnKmoNcFypq/NIQ=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.0/js/intlTelInput.js"></script>
+        <!--integrity="sha256-hh1uOVVCEJvG+hTOlwRi7mYJEFyaWjqqX/NyMuTNBBs=" crossorigin="anonymous"></script>-->
 
 {% compress js %}
 
@@ -44,6 +49,8 @@
 <script type="text/javascript" src="{% static 'javascripts/verification/controllers/resend.controller.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/verification/controllers/login.controller.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascripts/verification/controllers/user.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'javascripts/verification/controllers/verify.controller.js' %}"></script>
+
 
 
 

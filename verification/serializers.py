@@ -27,11 +27,11 @@ class LoginSerializer(serializers.Serializer):
 
 
 class UpdateSerializer(serializers.Serializer):
-    phone_number = serializers.CharField(max_length=15)
-    shoe_size = serializers.IntegerField()
-    country = serializers.CharField(max_length=40)
-    birth_date = serializers.CharField(max_length=20)
-    gender = serializers.CharField(max_length=1)
+    option = serializers.CharField(max_length=15)
+    phone = serializers.CharField(max_length=15)
+    size = serializers.CharField(max_length=5)
+    country = serializers.CharField(max_length=3)
+    gender = serializers.CharField(max_length=2)
     email = serializers.EmailField()
     full_name = serializers.CharField(max_length=40, required=False)
     special_key = serializers.CharField(max_length=40, required=False)

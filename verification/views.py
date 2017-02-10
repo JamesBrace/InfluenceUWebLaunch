@@ -12,6 +12,13 @@ from vendor.registration.views import ActivationView as BaseActivationView
 from verification.models import Account, StoreAccount, OnlineAccount
 from verification.permissions import IsAccountOwner
 from verification.serializers import AccountSerializer, ResponseSerializer, LoginSerializer, UpdateSerializer
+import re
+
+from twilio import twiml
+from twilio.rest import TwilioRestClient
+
+from django_twilio.decorators import twilio_view
+
 
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
@@ -282,10 +289,18 @@ class LoginView(views.APIView):
 
         temp = Account.objects.get(email=email)
 
+        print(temp.is_valid)
+
         if not temp.is_active:
             return Response({
                 'status': 'Unauthorized',
                 'message': 'You have to verify your email before logging in.'
+            }, status=status.HTTP_401_UNAUTHORIZED)
+
+        if temp.is_valid:
+            return Response({
+                'status': 'Unauthorized',
+                'message': 'You have already logged in and updated your information.'
             }, status=status.HTTP_401_UNAUTHORIZED)
 
         account = authenticate(email=email, password=password)
@@ -310,7 +325,17 @@ class LoginView(views.APIView):
         return Response(serialized.data, status=status.HTTP_201_CREATED)
 
 
-class UpdateView(viewsets.ModelViewSet):
+class Temp(object):
+    def __init__(self, email_, full_name, phone_number, special_key, shoe_size, country, gender):
+        self.email = email_
+        self.full_name = full_name
+        self.phone_number = phone_number
+        self.special_key = special_key
+        self.shoe_size = shoe_size
+        self.country = country
+        self.gender = gender
+
+class UpdateView(views.APIView):
     serializer_class = UpdateSerializer
 
     def get_permissions(self):
@@ -320,28 +345,56 @@ class UpdateView(viewsets.ModelViewSet):
             return permissions.AllowAny(),
         return permissions.IsAuthenticated(), IsAccountOwner()
 
-    def create(self, request):
-        serializer = self.serializer_class(data=request.data)
+    def post(self, request):
 
-        data = request.data
-        option = data.get('option')
-        email = data.get('email')
+        data_ = request.data.copy()
+        phone = data_.get('phone')
+        new_phone = re.sub("[^0-9]", "", phone)
+        # data['phone'] = new_phone
+
+        option = data_.get('option')
+        email = data_.get('email')
 
         account = Account.objects.get(email=email)
 
-        serializer.full_name = account.full_name
-        serializer.secret_key = account.secret_key
+        serializer = UpdateSerializer(data={'email':data_.get('email'), 'full_name': account.full_name, 'phone':new_phone,
+                                            'special_key':account.special_key, 'size':data_.get('size'),
+                                            'country':data_.get('country'),'gender':data_.get('gender'), 'option':option})
+
+        serializer.is_valid()
+
+        print("serialized data: ")
+        print(serializer.data)
 
         in_store = option == "in_store"
 
         if in_store:
             if serializer.is_valid():
+
                 store_account = StoreAccount.objects.create_user(**serializer.validated_data)
-                serialized = ResponseSerializer(store_account)
 
-                # add twilio shit here
 
-                return Response(serialized.data, status=status.HTTP_201_CREATED)
+                message_body = "InfluenceU: You're almost there! Your verification code is: " + account.special_key
+
+                account_sid = settings.TWILIO_ACCOUNT_SID
+                auth_token = settings.TWILIO_AUTH_TOKEN
+                client = TwilioRestClient(account_sid, auth_token)
+
+                send_number = "+" + new_phone
+
+                try:
+                    message = client.messages.create(to=send_number, from_="+14387924136", body=message_body)
+                except ValueError:
+                    store_account.delete()
+                    return Response({
+                        'status': 'error',
+                        'message': 'Could not send the text. Invalid number'
+                    }, status=status.HTTP_400_BAD_REQUEST)
+
+                return Response({
+                                    'status': 'success',
+                                    'message': 'Sent the text successfully'
+                                }, status=status.HTTP_400_BAD_REQUEST)
             else:
                 return Response("Error in updating account", status=status.HTTP_400_BAD_REQUEST)
         else:
@@ -350,6 +403,9 @@ class UpdateView(viewsets.ModelViewSet):
                 serialized = ResponseSerializer(online_account)
 
                 # add twilio shit here
+                message = "InfluenceU: You're almost there! Your verification code is: " + account.special_key
+
+                print("saving to in store database")
 
                 return Response(serialized.data, status=status.HTTP_201_CREATED)
             else:
@@ -367,6 +423,7 @@ class VerifyView(views.APIView):
 
         if special_key == temp_special_key:
             temp.is_valid = True
+            print (temp.is_valid)
             return Response({
                 'status': True,
                 'message': 'You have been successfully verified!'

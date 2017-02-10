@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '$6(x*g_2g9l_*g8peb-@anl5^*8q!1w)k&e&2!i)t6$s8kia94'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', True)
 
 PREPEND_WWW = False
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'anymail',
     'password_reset',
+    'django_twilio',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -211,7 +212,7 @@ CSRF_COOKIE_SECURE = True
 #TWILIO
 TWILIO_ACCOUNT_SID = "ACe566714112033a0e33e96148f8c6dc02"
 TWILIO_AUTH_TOKEN = "d1e0f2b919245b1f13a490340e69b126"
-TWILIO_DEFAULT_CALLERID = 'InfluenceU'
+
 
 
 #EMAIL VERIFICATION

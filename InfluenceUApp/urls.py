@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from rest_framework_nested import routers
 
 from InfluenceUApp.views import IndexView
-from verification.views import AccountViewSet, ResendView, ActivationView, LoginView, UpdateView
+from verification.views import AccountViewSet, ResendView, ActivationView, LoginView, UpdateView, VerifyView
 
 router = routers.SimpleRouter()
 router.register(r'accounts', AccountViewSet)
@@ -12,6 +12,7 @@ urlpatterns = [
 
     url(r'^api/v1/', include(router.urls)),
     url(r'^api/v1/auth/login/$', LoginView.as_view(), name='login'),
+    url(r'^api/v1/auth/verifyphone/$', VerifyView.as_view(), name='verify'),
     url(r'^api/v1/auth/update/$', UpdateView.as_view(), name='update'),
     url(r'^activate/complete/$', TemplateView.as_view(template_name='registration/activation_complete.html'),
         name='registration_activation_complete'),

@@ -24,11 +24,17 @@
     }).when('/test', {
         templateUrl: '/static/templates/verification/login.html',
         controller: 'LoginController',
-      controllerAs: 'vm'
+        controllerAs: 'vm'
     }).when('/user-info', {
         controller: 'UserController',
         controllerAs: 'vm',
         templateUrl: '/static/templates/verification/user-info.html'
+    }).when('/verify', {
+        controller: 'VerifyController',
+        controllerAs: 'vm',
+        templateUrl: '/static/templates/verification/verify-phone.html'
+    }).when('/complete', {
+        templateUrl: '/static/templates/verification/verify-success.html'
     }).when('/success', {
       controller: 'ResendController',
       controllerAs: 'vm',

@@ -196,6 +196,56 @@
             width: 193px;
             text-align: left;
         }
+
+        .checkmark__circle {
+          stroke-dasharray: 166;
+          stroke-dashoffset: 166;
+          stroke-width: 2;
+          stroke-miterlimit: 10;
+          stroke: #7ac142;
+          fill: none;
+          animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          display: block;
+          stroke-width: 2;
+          stroke: #fff;
+          stroke-miterlimit: 10;
+          margin: 10% auto;
+          box-shadow: inset 0px 0px 0px #7ac142;
+          animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark__check {
+          transform-origin: 50% 50%;
+          stroke-dasharray: 48;
+          stroke-dashoffset: 48;
+          animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+        @keyframes scale {
+          0%, 100% {
+            transform: none;
+          }
+          50% {
+            transform: scale3d(1.1, 1.1, 1);
+          }
+        }
+        @keyframes fill {
+          100% {
+            box-shadow: inset 0px 0px 0px 30px #7ac142;
+          }
+        }
+
     </style>
 
 
@@ -204,14 +254,14 @@
     {% load staticfiles %}
     <div style ="padding-top: 20px; max-width: 540px; margin: 0 auto;">
         <div>
-            <a href="//www.influenceu.com"><img src= {% static "images/inf-logo-blk.png" %} alt="Influence U"></a>
+            <a href="//www.influenceu.com"><img src= {% static "images/inf-logo-blk.png" %} ></a>
         </div>
 
         <div style="max-width: 540px;">
             <h1 class="content"style="padding: 10px; font-size: 24px; font-weight: 500; line-height: 36px;"><span style="font-size: 22px;">adidas YEEZY Boost 350 Core Black / Red</span> <span style="padding-top: 10px; display: block; letter-spacing: 5px; font-size: 32px;">RAFFLE</span></h1>
         </div>
         <div class="content target" style="max-width: 540px; background: #edede3;">
-            <img style ="max-width: 100%; height: auto;" src= {% static "images/yeezy-core-black-white.jpg" %} alt="YEEZY Boost 350 Core Black / Red">
+            <img style ="max-width: 100%; height: auto;" src= {% static "images/yeezy-core-black-white.jpg" %} >
         </div>
         <div class="content target" style="max-width: 540px;">
             <h3>A new colourway means another raffle!</h3>

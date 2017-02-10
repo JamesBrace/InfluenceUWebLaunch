@@ -1,0 +1,129 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ng-intl-tel-input",
+        "scope": null,
+        "escapedName": "ng-intl-tel-input",
+        "name": "ng-intl-tel-input",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/jamesbrace/Desktop/OneDrive - McGill University/Django Projects/InfluenceU/InfluenceUWebLaunch"
+    ]
+  ],
+  "_from": "ng-intl-tel-input@latest",
+  "_id": "ng-intl-tel-input@2.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ng-intl-tel-input",
+  "_nodeVersion": "4.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ng-intl-tel-input-2.0.0.tgz_1479321879830_0.2311831635888666"
+  },
+  "_npmUser": {
+    "name": "thegigaraptor",
+    "email": "johnbobsexipants@gmail.com"
+  },
+  "_npmVersion": "2.14.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ng-intl-tel-input",
+    "scope": null,
+    "escapedName": "ng-intl-tel-input",
+    "name": "ng-intl-tel-input",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-intl-tel-input/-/ng-intl-tel-input-2.0.0.tgz",
+  "_shasum": "705a09c68cbc754113e376d81856a0a598bd1890",
+  "_shrinkwrap": null,
+  "_spec": "ng-intl-tel-input",
+  "_where": "/Users/jamesbrace/Desktop/OneDrive - McGill University/Django Projects/InfluenceU/InfluenceUWebLaunch",
+  "author": {
+    "name": "bighappyface",
+    "email": "anomalous20@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/hodgepodgers/ng-intl-tel-input/issues"
+  },
+  "contributors": [
+    {
+      "name": "SyntaxStacks",
+      "email": "johnbobsexipants@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "AngularJS directive implementing intl-tel-input (https://github.com/Bluefieldscom/intl-tel-input)",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "concat-cli": "^1.0.1",
+    "http-server": "^0.8.0",
+    "jasmine-core": "^2.3.4",
+    "jshint": "2.8.0",
+    "karma": "^0.13.6",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sinon": "^1.0.4",
+    "mocha": "^2.2.5",
+    "mversion": "^1.10.0",
+    "phantomjs": "^1.9.17",
+    "phantomjs-polyfills": "^1.0.1",
+    "protractor": "~2.4.0",
+    "sinon": "^1.15.4",
+    "uglify": "^0.1.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "705a09c68cbc754113e376d81856a0a598bd1890",
+    "tarball": "https://registry.npmjs.org/ng-intl-tel-input/-/ng-intl-tel-input-2.0.0.tgz"
+  },
+  "gitHead": "0d0fae11f7319f3ffe15dceeebf6282c5e86a803",
+  "homepage": "http://hodgepodgers.github.io/ng-intl-tel-input",
+  "keywords": [
+    "ng-intl-tel-input",
+    "intl-tel-input",
+    "international",
+    "telephone",
+    "validator",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "main": "dist/ng-intl-tel-input.js",
+  "maintainers": [
+    {
+      "name": "thegigaraptor",
+      "email": "johnbobsexipants@gmail.com"
+    }
+  ],
+  "name": "ng-intl-tel-input",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hodgepodgers/ng-intl-tel-input.git"
+  },
+  "scripts": {
+    "build": "npm run concat && npm run uglify",
+    "concat": "node ./node_modules/concat-cli/index.js -f ng-intl-tel-input.{module,provider,directive}.js -o dist/ng-intl-tel-input.js",
+    "jshint": "jshint .",
+    "karma": "karma start karma.conf.js",
+    "mversion": "mversion ",
+    "protractor": "protractor protractor.conf.js",
+    "start": "nohup http-server",
+    "test": "npm run jshint && npm run karma",
+    "uglify": "uglify -s dist/ng-intl-tel-input.js -o dist/ng-intl-tel-input.min.js",
+    "webdriver-update": "webdriver-manager update"
+  },
+  "version": "2.0.0"
+}

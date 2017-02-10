@@ -2,7 +2,7 @@
 from south.db import db
 from south.v2 import SchemaMigration
 
-from vendor.django_twilio.models import AUTH_USER_MODEL
+from django_twilio import AUTH_USER_MODEL
 
 
 class Migration(SchemaMigration):

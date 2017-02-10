@@ -5,6 +5,7 @@ from django.core.validators import RegexValidator
 from django.db import models
 
 
+
 class AccountManager(BaseUserManager):
     def create_user(self, email, password=None, **kwargs):
         if not email:
@@ -27,19 +28,21 @@ class AccountManager(BaseUserManager):
 class StoreManager(BaseUserManager):
     def create_user(self, email, password=None, **kwargs):
 
+        # print("ok")
+
+        if not email:
+            raise ValueError('Users must have a valid email address.')
+
         if not kwargs.get('country'):
             raise ValueError('Users must select a country.')
-
-        if not kwargs.get('birth_date'):
-            raise ValueError('Users must have a valid birth date.')
 
         if not kwargs.get('gender'):
             raise ValueError('Users must select a gender.')
 
-        if not kwargs.get('phone_number'):
+        if not kwargs.get('phone'):
             raise ValueError('Users must have a valid phone number.')
 
-        if not kwargs.get('shoe_size'):
+        if not kwargs.get('size'):
             raise ValueError('Users must select a shoe size.')
 
         temp = Account.objects.get(email=email)
@@ -48,11 +51,10 @@ class StoreManager(BaseUserManager):
             email=self.normalize_email(temp.email),
             full_name=temp.full_name,
             special_key=temp.special_key,
-            phone_number=kwargs.get('phone_number'),
+            phone_number=kwargs.get('phone'),
             is_valid=False,
-            shoe_size=kwargs.get('phone_number'),
+            shoe_size=kwargs.get('size'),
             country=kwargs.get('country'),
-            birth_date=kwargs.get('birth_date'),
             gender=kwargs.get('gender'),
             password=temp.password,
         )
@@ -70,9 +72,6 @@ class DeliveryManager(BaseUserManager):
         if not kwargs.get('country'):
             raise ValueError('Users must select a country.')
 
-        if not kwargs.get('birth_date'):
-            raise ValueError('Users must have a valid birth date.')
-
         if not kwargs.get('gender'):
             raise ValueError('Users must select a gender.')
 
@@ -88,11 +87,10 @@ class DeliveryManager(BaseUserManager):
             email=self.normalize_email(temp.email),
             full_name=temp.full_name,
             special_key=temp.special_key,
-            phone_number=kwargs.get('phone_number'),
+            phone_number=kwargs.get('phone'),
             is_valid=False,
-            shoe_size=kwargs.get('phone_number'),
+            shoe_size=kwargs.get('size'),
             country=kwargs.get('country'),
-            birth_date=kwargs.get('birth_date'),
             gender=kwargs.get('gender'),
             password=temp.password,
         )
@@ -144,17 +142,14 @@ class StoreAccount(AbstractBaseUser):
 
     full_name = models.CharField(max_length=40, blank=False, default="Fake Name")
 
-    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
-                                 message="Phone number must be entered in the format: '+999999999'. "
-                                         "Up to 15 digits allowed.")
-    phone_number = models.CharField(validators=[phone_regex], blank=True, max_length=15, unique=True, null=True)  # validators should be a list
+    phone_number = models.CharField(blank=True, max_length=15, unique=True, null=True)  # validators should be a list
 
     special_key = models.CharField(max_length=6, blank=True, default="123456")
 
     #will be used for sms verification
     is_valid = models.BooleanField(default=False)
 
-    shoe_size = models.IntegerField(blank=True, null=True)
+    shoe_size = models.CharField(max_length=3, blank=True, null=True)
 
     country = models.CharField(max_length=40, blank=False, default="Not a real country")
 
@@ -179,17 +174,14 @@ class OnlineAccount(AbstractBaseUser):
 
     full_name = models.CharField(max_length=40, blank=False, default="Fake Name")
 
-    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
-                                 message="Phone number must be entered in the format: '+999999999'. "
-                                         "Up to 15 digits allowed.")
-    phone_number = models.CharField(validators=[phone_regex], blank=True, max_length=15, unique=True, null=True)  # validators should be a list
+    phone_number = models.CharField(blank=True, max_length=15, unique=True, null=True)  # validators should be a list
 
     special_key = models.CharField(max_length=6, blank=True, default="123456")
 
     #will be used for sms verification
     is_valid = models.BooleanField(default=False)
 
-    shoe_size = models.IntegerField(blank=True, null=True)
+    shoe_size = models.CharField(max_length=3, blank=True, null=True)
 
     country = models.CharField(max_length=40, blank=False, default="Not a real country")
 
@@ -207,3 +199,4 @@ class OnlineAccount(AbstractBaseUser):
 
     def __unicode__(self):
         return self.email
+

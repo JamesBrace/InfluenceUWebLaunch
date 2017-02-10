@@ -24,19 +24,18 @@
         vm.message = null;
 
 
-        activate();
+        //activate();
 
         /**
          * @name activate
          * @desc Actions to be performed when this controller is instantiated
          * @memberOf verification.controllers.LoginController
          */
-        function activate() {
-
-            // if (Verification.isAuthenticated()) {
-            //   $location.url('/verify');
-            // }
-        }
+        // function activate() {
+        //     if (Verification.isAuthenticated()) {
+        //       $location.url('/verify');
+        //     }
+        // }
 
         /**
          * @name login
