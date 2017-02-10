@@ -5,7 +5,6 @@ from django.core.validators import RegexValidator
 from django.db import models
 
 
-
 class AccountManager(BaseUserManager):
     def create_user(self, email, password=None, **kwargs):
         if not email:

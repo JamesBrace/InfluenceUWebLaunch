@@ -20,6 +20,9 @@ from twilio.rest import TwilioRestClient
 from django_twilio.decorators import twilio_view
 
 
+from django.contrib.auth import get_user_model
+User = get_user_model()
+
 REGISTRATION_SALT = getattr(settings, 'REGISTRATION_SALT', 'registration')
 
 
@@ -394,7 +397,7 @@ class UpdateView(views.APIView):
                 return Response({
                                     'status': 'success',
                                     'message': 'Sent the text successfully'
-                                }, status=status.HTTP_400_BAD_REQUEST)
+                                }, status=status.HTTP_200_OK)
             else:
                 return Response("Error in updating account", status=status.HTTP_400_BAD_REQUEST)
         else:
@@ -423,6 +426,7 @@ class VerifyView(views.APIView):
 
         if special_key == temp_special_key:
             temp.is_valid = True
+            temp.save()
             print (temp.is_valid)
             return Response({
                 'status': True,

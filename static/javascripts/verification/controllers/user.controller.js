@@ -40,7 +40,7 @@
         };
 
 
-       // activate();
+       activate();
 
         /**
          * @name activate
