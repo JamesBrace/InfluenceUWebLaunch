@@ -41,4 +41,5 @@
       templateUrl: '/static/templates/verification/success.html'
     });
   }
+  
 })();
